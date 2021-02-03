@@ -15,22 +15,10 @@
     background-color: forestgreen;
 }
 
-.FruitsVeggies {
-    position:absolute;
-    text-align: left;
-    top:110px;
-}
-
-.FishMeat {
-    position:absolute;
-    text-align: left;
-    top:160px;
-}
-
-.DairyEggs {
-    position:absolute;
-    text-align: left;
-    top:210px;
+.ReturnHome {
+    position: absolute;;
+    bottom:100px;
+    right:50px;
 }
 
 .Footer{
