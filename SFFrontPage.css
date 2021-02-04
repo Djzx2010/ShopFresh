@@ -12,32 +12,66 @@
     height:100px;
     text-align: center;
     color: white;
-    background-color: forestgreen;
+    background-color: #004d00;
+}
+
+.ShoppingCart {
+    position: absolute;
+    text-align: right;
+    top:85px;
+    right:25px;
 }
 
 .FruitsVeggies {
     position:absolute;
     text-align: left;
-    top:110px;
+    top:90px;
+}
+.FVBorder {
+    position:absolute;
+    border:4px solid black;
+    left:10px;
+    width:1640px;
+    height:175px;
+    overflow:auto;
+    scroll-behavior: smooth;
 }
 
 .FishMeat {
     position:absolute;
     text-align: left;
-    top:160px;
+    top:325px;
+}
+.FMBorder {
+    position:absolute;
+    border:4px solid black;
+    left:5px;
+    width:1640px;
+    height:175px;
+    overflow:auto;
+    scroll-behavior: smooth;
 }
 
 .DairyEggs {
     position:absolute;
     text-align: left;
-    top:210px;
+    top:560px;
+}
+.DEBorder {
+    position:absolute;
+    border:4px solid black;
+    left:5px;
+    width:1640px;
+    height:175px;
+    overflow:auto;
+    scroll-behavior: smooth;
 }
 
 .Footer{
     position: absolute;
     width: 100%;
-    height: 100px;
-    background-color: forestgreen;
+    height: 70px;
+    background-color: #004d00;
     bottom: 0px;
     color:white;
     text-align: center;
