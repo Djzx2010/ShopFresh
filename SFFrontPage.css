@@ -18,8 +18,15 @@
 .ShoppingCart {
     position: absolute;
     text-align: right;
-    top:85px;
+    top:90px;
     right:25px;
+}
+
+.Login {
+    position: absolute;
+    text-align: right;
+    top:90px;
+    right:175px;
 }
 
 .FruitsVeggies {
