@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-a {
-    padding-left: 1%;
-}
-
 a:link {
   color: green;
   background-color: transparent;
@@ -61,6 +57,8 @@ ul.menu {
 }
 
 li.menu {
+    padding-left: 1%;
+    padding-right: 1%;
     display: inline;
 }
 

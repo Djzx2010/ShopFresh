@@ -4,44 +4,53 @@
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ShopFresh - Butter</title>
-        <link rel="stylesheet" href="SFProductPages.css">
+        <link rel="stylesheet" href="ResponsiveProductPages.css">
     </head>
     
     <body>
+        <!-- header -->
         <header>
             <h1>Shop Fresh - Dairy&Eggs</h1>
         </header>
         
+        <!-- menu/navigation bar -->
         <ul class="menu">
             <li class="menu"><a href="ShopFreshFrontPage.html">Back to Welcome Page</a></li>  
-            <li class="menu"><a href="ShopFreshFruits&VeggiesSection.html">Fruits&Veggies Aisle</a></li> 
+            <li class="menu"><a href="ShopFreshFruits&VeggiesSection.html">Fruits&Vegetables Aisle</a></li> 
             <li class="menu"><a href="ShopFreshDairy&EggsSection.html">Dairy&Eggs Aisle</a></li> 
             <li class="menu"><a href="ShopFreshFish&MeatSection.html">Fish&Meat Aisle</a></li>
-            <li class="menu"><a style="float:right" href="ShoppingCart.html">Shopping Cart</a></li>
-            <li class="menu"><a style="float:right" href="ShopFreshLogin.html">Login</a></li>
+            <li class="menuRight"><a href="ShoppingCart.html">Shopping Cart</a></li>
+            <li class="menuRight"><a href="ShopFreshLogin.html">Login</a></li>
         </ul>
         
+        <!-- variable page content, different for all products -->
         <div>
-            <!-- The image of the strawberries -->
+            <!-- image of the product -->
             <img class="ProductImage" src="ButterImage.jpg" alt="Sliced butter on its wrapping.">
         </div>
-        <!-- Left to complete -->
-        <p class="description">
+        <!-- description of the product -->
+        <div  class="description">
+        <p>
         <h1>Butter &nbsp;&nbsp;&nbsp;&nbsp; <button type="botton">More Information</button></h1>
-        <h3>ShopFresh Brand</h3>
-        454g
-        <h1 style="color:rgb(60,179,113, 0.5)">$4.69</h1>
-        <br><br><br><br><br>
-        <select name="quantity">
-            <option value="one">1</option>
-            <option value="two">2</option>
-            <option value="three">3</option>
-            <option value="four">4</option>
-            <option value="five">5</option>
-        </select> &nbsp;&nbsp;&nbsp;&nbsp; 
-        <button type="button">Add to Cart</button>
+        <h3>Local ShopFresh Brand</h3>
+        454g<br><br>
+        <h1 class="price">$4.69</h1>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- Adding to cart -->
+        <form class="add">
+            <select name="quantity">
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
+            </select> &nbsp;&nbsp;&nbsp;&nbsp; 
+            <button type="submit">Add to Cart</button>
+        </form>
         </p>
+        </div>
         
+        <!-- footer includes student information -->
         <footer>
             <h4>Derek Lam(40132682), Mathieu Morier(...), Alexandra Charland(40061073), Jizhou Yang(40033034), Leon Zhang(40175616) , ...</h4>
         </footer>

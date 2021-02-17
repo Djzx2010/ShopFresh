@@ -1,0 +1,134 @@
+/* padding and borders included in width and height */
+* {box-sizing: border-box}
+
+/* mmobile first design */
+/* change link color (for aesthetic purposes only) */
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightyellow;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* only difference with mobile and other for header and footer: 
+   font size is smaller */
+header {
+    padding: 2%;
+    width:100%;
+    height:20%;
+    text-align: center;
+    color: white;
+    background-color: mediumseagreen;
+    opacity: 0.7;
+    font-size: 15px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: mediumseagreen;
+    opacity: 0.7;
+    bottom: 0px;
+    color:white;
+    font-size: 12px;
+}
+
+/* menu/navigation bar */
+ul.menu {
+    margin-top: 0;
+    border-bottom: medium groove green;
+    border-top: medium groove green;
+    background-color: rgb(60,179,113, 0.5);
+    padding: 1%;
+    list-style-type: none;
+}
+
+/* stack menu items rather than making them inline for mobile */
+li.menu {
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+}
+
+li.menuRight {
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+}
+
+/* product images should span the entire column */
+.productImage {
+    width: 100%;
+    padding: 5%;
+    height: auto;
+}
+
+/* override the link style designed earlier for product names */
+#productName {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+/* For mobile, all columns should have take up the full screen width */
+.column {
+    width: 100%;
+    display: inline;
+}
+
+
+/* landscape tablets should have two products side by side and header/footer font size larger */
+@media only screen and (min-width: 780px) {
+    
+    /* adjust columns to set two side by side */
+    .column {
+        width: 50%;
+        padding: 2%;
+        float: left;
+    }
+    
+    /* adjust header and footer font size */
+    header {font-size: 20px}
+    footer {font-size: 15px}
+}
+
+/* laptops and desktops should have a horizontal menu with three sets of image and name side by side 
+   and header/footer font size larger */
+@media only screen and (min-width: 860px) {
+    
+    /* adjust menu for horizontal display */
+    li.menu {
+        width: auto;
+        display: inline;
+    }   
+    li.menuRight {
+        width: auto;
+        display: inline;
+        float: right;
+    }
+    
+    /* adjust header and footer font size */
+    header {font-size: 20px}
+    footer {font-size: 15px}
+    
+    /* adjust columns to set three side by side */
+    .column {
+        width: 33.33%;
+        padding: 2%;
+        float: left;
+    }
+}
