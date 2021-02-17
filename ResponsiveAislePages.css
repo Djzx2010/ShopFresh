@@ -84,6 +84,11 @@ li.menuRight {
     text-decoration: none;
 }
 
+.subInfo {
+    text-align: center;
+    color: rgb(60,179,113, 0.5);
+}
+
 /* For mobile, all columns should have take up the full screen width */
 .column {
     width: 100%;
