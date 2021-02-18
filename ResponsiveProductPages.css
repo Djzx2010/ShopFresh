@@ -37,20 +37,24 @@ header {
     height:20%;
     text-align: center;
     color: white;
-    background-color: mediumseagreen;
+    background-color: mediumseagreen; /* For browsers that don't support gradients */
+    background-image: linear-gradient(70deg, mediumseagreen, slateblue);
     opacity: 0.7;
-    font-size: 15px;
+    font-size: 12px;
+    font-family: sans-serif;
 }
 
 footer {
     display: flex;
     width: 100%;
     height: 10%;
-    background-color: mediumseagreen;
+    background-color: mediumseagreen; /* For browsers that don't support gradients */
+    background-image: linear-gradient(70deg, mediumseagreen, slateblue);
     opacity: 0.7;
     bottom: 0px;
     color:white;
     font-size: 12px;
+    font-family: sans-serif;
 }
 
 /* menu/navigation bar */
@@ -69,6 +73,7 @@ li.menu {
     padding-left: 1%;
     padding-right: 1%;
     text-align: center;
+    font-family: sans-serif;
 }
 
 li.menuRight {
@@ -76,6 +81,7 @@ li.menuRight {
     padding-left: 1%;
     padding-right: 1%;
     text-align: center;
+    font-family: sans-serif;
 }
 
 /* takes up entire width */
@@ -83,6 +89,7 @@ li.menuRight {
     margin-top: 2%;
     width: 100%;
     padding-left: 2%;
+    font-family: sans-serif;
 }
 
 .price {
@@ -90,12 +97,12 @@ li.menuRight {
     display: inline;
 }
 
-.add {display:inline;}
-
 /* not dependent on screen size */
 button {
     display: inline;
 }
+
+.add {line-height: 3;}
 
 /* landscape tablets should have images and descriptions side by side and header/footer font size larger*/
 @media only screen and (min-width: 780px) {
@@ -113,6 +120,12 @@ button {
     /* adjust header and footer font size */
     header {font-size: 20px}
     footer {font-size: 15px}
+    
+    /* the add to cart options next to the price */
+    .add {
+        display: inline;
+        line-height: normal;
+    }
 }
 
 /* laptops and desktops should have a horizontal menu with image and description side by side 
@@ -142,6 +155,12 @@ button {
     /* adjust header and footer font size */
     header {font-size: 20px}
     footer {font-size: 15px}
+    
+    /* the add to cart options next to the price */
+    .add {
+        display: inline;
+        line-height: normal;
+    }
 }
 
 
