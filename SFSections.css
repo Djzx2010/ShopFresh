@@ -15,6 +15,20 @@
     background-color: #004d00;
 }
 
+footer {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: mediumseagreen; /* For browsers that don't support gradients */
+    background-image: linear-gradient(70deg, mediumseagreen, slateblue);
+    opacity: 0.7;
+    bottom: 0px;
+    color:white;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
 .LoginForm {
     position:absolute;
     width:1700px;
@@ -48,19 +62,10 @@
     right:50px;
 }
 
-.Footer{
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    background-color: #004d00;
-    bottom: 0px;
-    color:white;
-    text-align: center;
-  }
 
   .shoppingList{
     position: absolute;
-    top:18%;
+    top:25%;
     margin-left: 25%;
     margin-right: 25%;
     width: 50%;
@@ -76,6 +81,166 @@
 
 .checkOut{
     position: absolute;
-    bottom:40%;
+    bottom:30%;
     margin-left: 60%;
+}
+
+/* padding and borders included in width and height */
+* {box-sizing: border-box}
+
+/* mmobile first design */
+/* change link color (for aesthetic purposes only) */
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightyellow;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* let the image of the product take up the full width of the screen on mobile */
+.ProductImage {
+    padding: 2%;
+    align-content: center;
+    width: 100%;
+    height: auto;
+}
+
+/* only difference with mobile and other for header and footer:
+   font size is smaller */
+header {
+    padding: 2%;
+    width:100%;
+    height:20%;
+    text-align: center;
+    color: white;
+    background-color: mediumseagreen; /* For browsers that don't support gradients */
+    background-image: linear-gradient(70deg, mediumseagreen, slateblue);
+    opacity: 0.7;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: mediumseagreen; /* For browsers that don't support gradients */
+    background-image: linear-gradient(70deg, mediumseagreen, slateblue);
+    opacity: 0.7;
+    bottom: 0px;
+    color:white;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+/* menu/navigation bar */
+ul.menu {
+    margin-top: 0;
+    border-bottom: medium groove green;
+    border-top: medium groove green;
+    background-color: rgb(60,179,113, 0.5);
+    padding: 1%;
+    list-style-type: none;
+}
+
+/* stack menu items rather than making them inline for mobile */
+li.menu {
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+li.menuRight {
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/* takes up entire width */
+.description {
+    margin-top: 2%;
+    width: 100%;
+    padding-left: 2%;
+    font-family: sans-serif;
+}
+
+
+/* not dependent on screen size */
+button {
+    display: inline;
+}
+
+.add {line-height: 3;}
+
+/* landscape tablets should have images and descriptions side by side and header/footer font size larger*/
+@media only screen and (min-width: 780px) {
+    /* adjust image to be to the left of the description */
+    .ProductImage {
+        width: 50%;
+        height: auto;
+        float: left;
+    }
+    /* adjust description to be to the right of image */
+    .description {
+        width: 50%;
+        float: left;
+    }
+    /* adjust header and footer font size */
+    header {font-size: 20px}
+    footer {font-size: 15px}
+
+    /* the add to cart options next to the price */
+    .add {
+        display: inline;
+        line-height: normal;
+    }
+}
+
+/* laptops and desktops should have a horizontal menu with image and description side by side
+   and header/footer font size larger */
+@media only screen and (min-width: 860px) {
+    /* adjust menu for horizontal display */
+    li.menu {
+        width: auto;
+        display: inline;
+    }
+    li.menuRight {
+        width: auto;
+        display: inline;
+        float: right;
+    }
+
+    .shoppingList {
+        position: absolute;
+        top: 28%;
+        width: 50%;
+        height: auto;
+        float: left;
+    }
+
+    }
+    /* adjust header and footer font size */
+    header {font-size: 20px}
+    footer {font-size: 15px}
+
+    /* the add to cart options next to the price */
+    .add {
+        display: inline;
+        line-height: normal;
+    }
 }
