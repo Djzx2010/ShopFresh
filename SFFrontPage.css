@@ -1,0 +1,128 @@
+.BorderDiv {
+    position: absolute;
+    border:1px solid black;
+    width:100%;
+    height: 100%;
+    margin:auto;
+}
+
+.Header {
+    position: absolute;
+    width:100%;
+    height:100px;
+    text-align: center;
+    color: white;
+    background-color: #004d00;
+}
+
+.ShoppingCart {
+    position: absolute;
+    text-align: right;
+    top:90px;
+    right:25px;
+}
+
+.Login {
+    position: absolute;
+    text-align: right;
+    top:90px;
+    right:175px;
+}
+
+.FruitsVeggies {
+    position:absolute;
+    text-align: left;
+    top:90px;
+}
+.FVBorder {
+    position:absolute;
+    border:4px solid black;
+    left:10px;
+    width:1640px;
+    height:175px;
+    overflow:auto;
+    scroll-behavior: smooth;
+}
+
+.FishMeat {
+    position:absolute;
+    text-align: left;
+    top:325px;
+}
+.FMBorder {
+    position:absolute;
+    border:4px solid black;
+    left:10px;
+    width:1640px;
+    height:175px;
+    overflow:auto;
+    scroll-behavior: smooth;
+}
+
+.DairyEggs {
+    position:absolute;
+    text-align: left;
+    top:560px;
+}
+.DEBorder {
+    position:absolute;
+    border:4px solid black;
+    left:10px;
+    width:1640px;
+    height:175px;
+    overflow:auto;
+    scroll-behavior: smooth;
+}
+
+.Footer{
+    position: absolute;
+    width:100%;
+    height:70px;
+    background-color: #004d00;
+    bottom: 0px;
+    color:white;
+    text-align: center;
+}
+
+
+
+
+.button {
+    border: none;
+    color: white;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 1px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    }
+    
+.listProduct{
+    position: absolute;
+    top: 10%;
+    left:10%;
+    bottom:10%;
+    margin:auto;
+    }
+    
+.container {
+        
+    position: absolute;
+    width:100%;
+    height: 100%;
+    margin:auto;
+        
+    }
+
+
+.listUser{
+    position: absolute;
+    top: 20%;
+    left:20%;
+    right:30;
+    bottom:20%;
+    margin:auto;
+    }
