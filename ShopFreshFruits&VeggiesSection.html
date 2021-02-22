@@ -1,28 +1,77 @@
 <!DOCTYPE html>
-<html lang="eng" dir="ltr"></html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Shop Fresh - Fruits&Vegetables</title>
-    <link rel="stylesheet" href="SFSections.css">
-
-</head>
-<body>
-    <!--border-->
-    <div class="BorderDiv"> 
-        <!--Header-->
-        <div class="Header">
-            <h1>Fruits & Vegetables</h1>
+<html lang="en-CA">
+    
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ShopFresh - Fruits&Vegetables</title>
+        <link rel="stylesheet" href="ResponsiveAislePages.css">
+    </head>
+    
+    <body>
+        <!-- header -->
+        <header>
+            <h1>ShopFresh - Fruits&Vegetables</h1>
+        </header>
+        
+        <!-- menu/navigation bar -->
+        <ul class="menu">
+            <li class="menu"><a href="ShopFreshFrontPage.html">Back to Welcome Page</a></li>  
+            <li class="menu"><a href="ShopFreshFruits&VeggiesSection.html">Fruits&Vegetables Aisle</a></li> 
+            <li class="menu"><a href="ShopFreshDairy&EggsSection.html">Dairy&Eggs Aisle</a></li> 
+            <li class="menu"><a href="ShopFreshFish&MeatSection.html">Fish&Meat Aisle</a></li>
+            <li class="menuRight"><a href="ShoppingCart.html">Shopping Cart</a></li>
+            <li class="menuRight"><a href="ShopFreshLogin.html">Login</a></li>
+        </ul>
+        
+        <!-- products have links to their individual pages via image and name -->
+        <div class="column">
+        <div>
+            <a href="Strawberries.html" title="Go to the Strawberries product page for more information"><img class="productImage" src="images/StrawberriesImage.jpg"></a>
+            <a id="productName" href="Strawberries.html" title="Go to the Strawberries product page for more information"><h1>Strawberries</h1></a>
+            <p class="subInfo">454g<br>$4.99</p>
         </div>
-
-        <!--Return to Main page-->
-        <div class="ReturnHome">
-            <p class="RH"><a href="ShopFreshFrontPage.html"><h2>Home</h2></a></p>
+        
+        <div>
+            <a href="Blueberries.html" title="Go to the Blueberries product page for more information"><img class="productImage" src="images/BlueberriesImage.jpg"></a>
+            <a id="productName" href="Blueberries.html" title="Go to the Blueberries product page for more information"><h1>Blueberries</h1></a>
+            <p class="subInfo">170g<br>$3.99</p>
         </div>
-
-        <!--Footer-->
-        <div class="Footer">
-            <h3>Derek Lam(40132682), Mathieu Morier(...), Alexandra Charland(40061073), Jizhou Yang(40033034), Leon Zhang(40175616) , ...</h3>
         </div>
-    </div>
-</body>
+        
+        <div class="column">
+        <div>
+            <a href="Bananas.html" title="Go to the Bananas product page for more information"><img class="productImage" src="images/BananasImage.jpg"></a>
+            <a id="productName" href="Bananas.html" title="Go to the Bananas product page for more information"><h1>Banana</h1></a>
+            <p class="subInfo">190g (avg.)<br>$1.79/kg</p>
+        </div>
+        
+        <div>
+            <a href="Zucchini.html" title="Go to the Zucchini product page for more information"><img class="productImage" src="images/ZucchiniImage.jpg"></a>
+            <a id="productName" href="Zucchini.html" title="Go to the Zucchini product page for more information"><h1>Zucchini</h1></a>
+            <p class="subInfo">240g (avg.)<br>$5.99/kg</p>
+        </div>
+        </div>
+        
+        <div class="column">
+        <div>
+            <a href="Carrot.html" title="Go to the Carrot product page for more information"><img class="productImage" src="images/CarrotImage.jpg"></a>
+            <a id="productName" href="Carrot.html" title="Go to the Carrot product page for more information"><h1>Carrot</h1></a>
+            <p class="subInfo">1 bunch<br>$1.99</p>
+        </div>
+        
+        <div>
+            <a href="BellPepper.html" title="Go to the Bell Pepper product page for more information"><img class="productImage" src="images/BellPepperImage.jpg"></a>
+            <a id="productName" href="BellPepper.html" title="Go to the Bell Pepper product page for more information"><h1>Bell Pepper</h1></a>
+            <p class="subInfo">250g (avg.)<br>$15.49</p>
+        </div>
+        </div>
+        
+        <!-- footer includes student information -->
+        <footer>
+            <h4>Derek Lam(40132682), Mathieu Morier(40181304), Alexandra Charland(40061073), Jizhou Yang(40033034), Leon Zhang(40175616), Zebran Kamruzzaman(40065230)</h4>
+        </footer>
+        
+    </body>
+    
+
+</html>
