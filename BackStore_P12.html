@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="eng" dir="ltr">
+
+</html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Shop Fresh - BackStore Page</title>
+    <link rel="stylesheet" href="SFFrontPage.css">
+    <link rel="stylesheet" href="BackStore.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="ShopFreshFrontPage.html">ShopFresh</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="ShopFreshBackStorePage.html">BackStore</a>
+                    <a class="nav-link" href="ShoppingCart.html">Shopping Cart</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Outer Division-->
+    <div class="container-fluid" style="margin-top: 10px">
+        <div class="row">
+            <div class="col-8">
+                <h1>Edit Order</h1>
+            </div>
+            <div class="col-4">
+                <!-- back button -->
+                <a class="btn btn-secondary" href="BackStore_P11.html" role="button" style="float: right ">Back</a>
+            </div>
+        </div>
+
+        <div class="container-md">
+            <form action="BackStore_P11.html" method="post">
+                
+                <div class="mb-3">
+                    <label for="username">Edit Username</label>
+                    <input type="text" placeholder="User 1">
+                </div>
+                
+                <ul>
+                    <li> 1x Bananas<select name="quantity" style="float: right;">
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                            <option value="four">4</option>
+                            <option value="five">5</option>
+                        </select></li><br>
+                    <li> 1x Butter<select name="quantity" style="float: right;">
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                        <option value="four">4</option>
+                        <option value="five">5</option>
+                    </select></li><br>
+                    <li> 2x Chicken<select name="quantity" style="float: right;">
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                        <option value="four">4</option>
+                        <option value="five">5</option>
+                    </select></li><br>
+                    <li> 1x Milk<select name="quantity" style="float: right;">
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                        <option value="four">4</option>
+                        <option value="five">5</option>
+                    </select></li><br>
+                    <li> 1x Salmon<select name="quantity" style="float: right;">
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                        <option value="four">4</option>
+                        <option value="five">5</option>
+                    </select></li><br>
+                    <li> 3x Strawberries<select name="quantity" style="float: right;">
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                        <option value="four">4</option>
+                        <option value="five">5</option>
+                    </select></li><br>
+                </ul>
+                <!-- adding new product-->
+                <select class="form-select">
+                    <option selected>Add product</option>
+                    <option value="1">Bananas</option>
+                    <option value="2">Beef</option>
+                    <option value="3">BellPepper</option>
+                    <option value="4">Blueberries</option>
+                    <option value="5">Butter</option>
+                    <option value="6">Carrot</option>
+                    <option value="7">Chicken</option>
+                    <option value="8">Eggs</option>
+                    <option value="9">Milk</option>
+                    <option value="10">Oka</option>
+                    <option value="11">Parmesan</option>
+                    <option value="12">Pork</option>
+                    <option value="13">Salmon</option>
+                    <option value="14">Shrimp</option>
+                    <option value="15">Strawberries</option>
+                    <option value="16">Trout</option>
+                    <option value="17">Yogourt</option>
+                    <option value="18">Zucchini</option>
+                  </select><br>
+
+                <!-- save button -->
+
+                <button type="button" class="btn btn-primary">Save</button>
+                <a class="btn btn-secondary" href="BackStore_P11.html" role="button">Delete</a>
+            </form>
+        </div>
+
+    </div>
+    <!--JavaScript sourced for BootStrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+</body>
