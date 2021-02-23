@@ -1,86 +1,151 @@
-.BorderDiv {
-    position: absolute;
-    border:1px solid black;
-    width:100%;
-    height: 100%;
-    margin:auto;
+/* padding and borders included in width and height */
+* {box-sizing: border-box}
+
+/* mmobile first design */
+/* change link color (for aesthetic purposes only) */
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
 }
 
-.Header {
-    position: absolute;
+a:visited {
+  color: lightyellow;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* only difference with mobile and other for header and footer: 
+   font size is smaller */
+header {
+    padding: 2%;
     width:100%;
-    height:100px;
+    height:20%;
     text-align: center;
     color: white;
+    background-color: mediumseagreen; /* For browsers that do not support gradients */
+    background-image: linear-gradient(70deg, mediumseagreen, slateblue);
+    opacity: 0.7;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 10%;
     background-color: mediumseagreen; /* For browsers that don't support gradients */
     background-image: linear-gradient(70deg, mediumseagreen, slateblue);
-}
-
-.ShoppingCart {
-    position: absolute;
-    text-align: right;
-    top:90px;
-    right:25px;
-}
-
-.Login {
-    position: absolute;
-    text-align: right;
-    top:90px;
-    right:175px;
-}
-
-.FruitsVeggies {
-    position:absolute;
-    text-align: left;
-    top:90px;
-}
-.FVBorder {
-    position:absolute;
-    border:4px solid black;
-    left:10px;
-    width:1640px;
-    height:175px;
-    overflow:auto;
-    scroll-behavior: smooth;
-}
-
-.FishMeat {
-    position:absolute;
-    text-align: left;
-    top:325px;
-}
-.FMBorder {
-    position:absolute;
-    border:4px solid black;
-    left:10px;
-    width:1640px;
-    height:175px;
-    overflow:auto;
-    scroll-behavior: smooth;
-}
-
-.DairyEggs {
-    position:absolute;
-    text-align: left;
-    top:560px;
-}
-.DEBorder {
-    position:absolute;
-    border:4px solid black;
-    left:10px;
-    width:1640px;
-    height:175px;
-    overflow:auto;
-    scroll-behavior: smooth;
-}
-
-.Footer{
-    position: absolute;
-    width:100%;
-    height:70px;
-    background-color: mediumseagreen; /* For browsers that don't support gradients */
-    background-image: linear-gradient(70deg, mediumseagreen, slateblue);
+    opacity: 0.7;
     bottom: 0px;
     color:white;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+/* menu/navigation bar */
+ul.menu {
+    margin-top: 0;
+    border-bottom: medium groove green;
+    border-top: medium groove green;
+    background-color: rgb(60,179,113, 0.5);
+    padding: 1%;
+    list-style-type: none;
+}
+
+/* product images should span the entire column */
+.productImage {
+    width: 100%;
+    padding: 5%;
+    height: auto;
+}
+
+/* override the link style designed earlier for product names */
+#productName {
     text-align: center;
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.subInfo {
+    text-align: center;
+    color: rgb(60,179,113, 0.5);
+    font-family: sans-serif;
+}
+
+
+/* stack menu items rather than making them inline for mobile */
+li.menu {
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+li.menuRight {
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.welcome {
+    padding: 2%;
+    width:100%;
+    height:20%;
+    text-align: center;
+    color: mediumseagreen;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+/* landscape tablets should have two products side by side and header/footer font size larger */
+@media only screen and (min-width: 780px) {
+    
+    /* adjust header and footer font size */
+    header {font-size: 20px}
+    footer {font-size: 15px}
+    .welcome {font-size: 18px}
+    
+    /* adjust product info */
+    .product {
+        width: 49%;
+        display: inline-block;
+    }
+
+}
+
+/* laptops and desktops should have a horizontal menu with header/footer/welcome font size larger */
+@media only screen and (min-width: 860px) {
+    
+    /* adjust menu for horizontal display */
+    li.menu {
+        width: auto;
+        display: inline;
+    }   
+    li.menuRight {
+        width: auto;
+        display: inline;
+        float: right;
+    }
+    
+    /* adjust header and footer font size */
+    header {font-size: 20px}
+    footer {font-size: 15px}
+    .welcome {font-size: 18px}
+    
+    /* adjust product info */
+    .product {
+        width: 32%;
+        display:inline-block;
+    }
+}
