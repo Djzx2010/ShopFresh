@@ -19,7 +19,7 @@ body {
   font-size: 16px;
   margin: 1px 1px;
   cursor: pointer;
-  background-color: #4CAF50;
+  background-color: mediumseagreen;
 }
 
 .listProduct{
@@ -58,27 +58,33 @@ body {
 }
 
 .btn-primary {
-    color: white !important;
-    background-color: #4eb151 !important;
-    border-color: #46a049 !important
-  }
-  
-  .btn-primary:hover {
-    color: white !important;
-    background-color: #3e8e41 !important;
-    border-color: #367c39 !important
-  }
-  
-  .btn-secondary {
-    color: white !important;
-    background-color: #cc0000 !important;
-    border-color: #b30000 !important
-  }
-  
-  .btn-secondary:hover {
-    color: white !important;
-    background-color: #990000 !important;
-    border-color: #800000 !important
-  }
+  color: white !important;
+  background-color: mediumseagreen !important;
+  border-color: #39ac6d !important
+}
 
+.btn-primary:hover {
+  color: white !important;
+  background-color: #39ac6d !important;
+  border-color: #339961 !important
+}
 
+.btn-secondary {
+  color: white !important;
+  background-color: #b43c3c !important;
+  border-color: #ac3939 !important
+}
+
+.btn-secondary:hover {
+  color: white !important;
+  background-color: #ac3939 !important;
+  border-color: #993333 !important
+}
+
+.navbar {
+    color: white !important;
+    background-color: mediumseagreen !important; /* For browsers that do not support gradients */
+    background-image: linear-gradient(70deg, mediumseagreen, slateblue) !important;
+    opacity: 0.7 !important; 
+    font-family: sans-serif !important;
+}
