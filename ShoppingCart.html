@@ -2,16 +2,119 @@
 <html lang="eng" dir="ltr"></html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Fresh - Shopping Cart</title>
     <link rel="stylesheet" href="SFSections.css">
 </head>
 <body>
-    <!--border-->
-    <div class="BorderDiv"> 
-        <!--Header-->
-        <div class="Header">
-            <h1>Shopping Cart</h1>
+<!-- header -->
+<header>
+    <h1>ShopFresh - Shopping Cart</h1>
+</header>
+
+        <!-- menu/navigation bar -->
+        <ul class="menu">
+            <li class="menu"><a href="ShopFreshFrontPage.html">Back to Welcome Page</a></li>
+            <li class="menu"><a href="ShopFreshFruits&VeggiesSection.html">Fruits&Vegetables Aisle</a></li>
+            <li class="menu"><a href="ShopFreshDairy&EggsSection.html">Dairy&Eggs Aisle</a></li>
+            <li class="menu"><a href="ShopFreshFish&MeatSection.html">Fish&Meat Aisle</a></li>
+            <li class="menuRight"><a href="ShoppingCart.html">Shopping Cart</a></li>
+            <li class="menuRight"><a href="ShopFreshLogin.html">Login</a></li>
+        </ul>
+
+        <div class="continueShopping">
+            <p class="CS"><a href="ShopFreshFrontPage.html"><h2>Continue Shopping</h2></a></p>
+        </div>
+
+        <div class="itemList">
+            <table class="shoppingList" border="1px solid">
+                <tr>
+                    <td>Items</td>
+                    <td>Price</td>
+                    <td>KG/CH</td>
+                    <td>Delete</td>
+                </tr>
+                <tr>
+                    <td>Beef</td>
+                    <td>$19.89/kg</td>
+                    <td>
+                        <button>-</button>
+                        1.25
+                        <button>+</button>
+                    </td>
+                    <td><button>Remove Item</button></td>
+                </tr>
+                <tr>
+                    <td>Pork</td>
+                    <td>$16.59/kg</td>
+                    <td>
+                        <button>-</button>
+                        2
+                        <button>+</button>
+                    </td>
+                    <td><button>Remove Item</button></td>
+                </tr>
+                <tr>
+                    <td>Chicken</td>
+                    <td>$14.39/kg</td>
+                    <td>
+                        <button>-</button>
+                        2.2
+                        <button>+</button>
+                    </td>
+                    <td><button>Remove Item</button></td>
+                </tr>
+                <tr>
+                    <td>2% Milk</td>
+                    <td>$5.49</td>
+                    <td>
+                        <button>-</button>
+                        2
+                        <button>+</button>
+                    </td>
+                    <td><button>Remove Item</button></td>
+                </tr>
+                <tr>
+                    <td>Egg</td>
+                    <td>$2.99/CH</td>
+                    <td>
+                        <button>-</button>
+                        1
+                        <button>+</button>
+                    </td>
+                    <td><button>Remove Item</button></td>
+                </tr>
+                <tr>
+                    <td>Banana</td>
+                    <td>$1.79/kg</td>
+                    <td>
+                        <button>-</button>
+                        0.8
+                        <button>+</button>
+                    </td>
+                    <td><button>Remove Item</button></td>
+                </tr>
+                <tr>
+                    <td>Zucchini</td>
+                    <td>$5.99/kg</td>
+                    <td>
+                        <button>-</button>
+                        1.1
+                        <button>+</button>
+                    </td>
+                    <td><button>Remove Item</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="price">
+            <table class="checkOut" border="0px solid">
+                <tr><td>Check out: </td></tr>
+                <tr><td>Sous-total Items: </td><td>$111.69</td></tr>
+                <tr><td>QST: </td><td>10.61</td></tr>
+                <tr><td>GST: </td><td>5.58</td></tr>
+                <tr><td>Price Total:  </td><td>127.88</td></tr>
+            </table>
         </div>
 
         <!--Return to Main page-->
@@ -19,9 +122,12 @@
             <p class="RH"><a href="ShopFreshFrontPage.html"><h2>Home</h2></a></p>
         </div>
 
-        <!--Footer-->
-        <div class="Footer">
-            <h3>Derek Lam(40132682), Mathieu Morier(40181304), Alexandra Charland(40061073), Jizhou Yang(40033034), Leon Zhang(40175616) , Zebran Kamruzzaman(40065230)</h3>
-        </div>
-    </div>
+<!-- footer includes student information -->
+<footer>
+    <h4>Derek Lam(40132682), Mathieu Morier(40181304), Alexandra Charland(40061073), Jizhou Yang(40033034), Leon Zhang(40175616), Zebran Kamruzzaman(40065230)</h4>
+</footer>
+
 </body>
+
+
+</html>
