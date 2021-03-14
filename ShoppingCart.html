@@ -5,6 +5,7 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Fresh - Shopping Cart</title>
     <link rel="stylesheet" href="SFSections.css">
+    <script type = "text/javascript" src =shoppingCart.js></script>
 </head>
 <body>
 <!-- header -->
@@ -16,96 +17,83 @@
             <p class="CS"><a href="ShopFreshFrontPage.html"><h2>Continue Shopping</h2></a></p>
         </div>
 
-        <div class="itemList">
-            <table class="shoppingList" border="1px solid">
-                <tr>
-                    <td>Items</td>
-                    <td>Price</td>
-                    <td>KG/CH</td>
-                    <td>Delete</td>
-                </tr>
-                <tr>
-                    <td>Beef</td>
-                    <td>$19.89/kg</td>
-                    <td>
-                        <button>-</button>
-                        1.25
-                        <button>+</button>
-                    </td>
-                    <td><button>Remove Item</button></td>
-                </tr>
-                <tr>
-                    <td>Pork</td>
-                    <td>$16.59/kg</td>
-                    <td>
-                        <button>-</button>
-                        2
-                        <button>+</button>
-                    </td>
-                    <td><button>Remove Item</button></td>
-                </tr>
-                <tr>
-                    <td>Chicken</td>
-                    <td>$14.39/kg</td>
-                    <td>
-                        <button>-</button>
-                        2.2
-                        <button>+</button>
-                    </td>
-                    <td><button>Remove Item</button></td>
-                </tr>
-                <tr>
-                    <td>2% Milk</td>
-                    <td>$5.49</td>
-                    <td>
-                        <button>-</button>
-                        2
-                        <button>+</button>
-                    </td>
-                    <td><button>Remove Item</button></td>
-                </tr>
-                <tr>
-                    <td>Egg</td>
-                    <td>$2.99/CH</td>
-                    <td>
-                        <button>-</button>
-                        1
-                        <button>+</button>
-                    </td>
-                    <td><button>Remove Item</button></td>
-                </tr>
-                <tr>
-                    <td>Banana</td>
-                    <td>$1.79/kg</td>
-                    <td>
-                        <button>-</button>
-                        0.8
-                        <button>+</button>
-                    </td>
-                    <td><button>Remove Item</button></td>
-                </tr>
-                <tr>
-                    <td>Zucchini</td>
-                    <td>$5.99/kg</td>
-                    <td>
-                        <button>-</button>
-                        1.1
-                        <button>+</button>
-                    </td>
-                    <td><button>Remove Item</button></td>
-                </tr>
-            </table>
-        </div>
+<div class="itemList">
+    <table class="shoppingList" border="1px solid">
+        <tr>
+            <td>Items</td>
+            <td>Price</td>
+            <td>KG/CH</td>
+            <td>Delete</td>
+        </tr>
+        <tr>
+            <td>Beef</td>
+            <td>$19.89/kg</td>
+            <td>
+                <input id = "porkVolum">
+            </td>
+            <td><button>Remove Item</button></td>
+        </tr>
+        <tr>
+            <td>Pork</td>
+            <td>$16.59/kg</td>
+            <td>
+                <input id = "beefVolum">
 
-        <div class="price">
-            <table class="checkOut" border="0px solid">
-                <tr><td>Check out: </td></tr>
-                <tr><td>Sous-total Items: </td><td>$111.69</td></tr>
-                <tr><td>QST: </td><td>10.61</td></tr>
-                <tr><td>GST: </td><td>5.58</td></tr>
-                <tr><td>Price Total:  </td><td>127.88</td></tr>
-            </table>
-        </div>
+            </td>
+            <td><button>Remove Item</button></td>
+        </tr>
+        <tr>
+            <td>Salmon</td>
+            <td>$6.99</td>
+            <td>
+                <input id = "salmonVolum">
+            </td>
+            <td><button>Remove Item</button></td>
+        </tr>
+        <tr>
+            <td>2% Milk</td>
+            <td>$5.49</td>
+            <td>
+                <input id = "milkVolum">
+            </td>
+            <td><button>Remove Item</button></td>
+        </tr>
+        <tr>
+            <td>Egg</td>
+            <td>$2.99/CH</td>
+            <td>
+                <input id = "eggVolum">
+            </td>
+            <td><button>Remove Item</button></td>
+        </tr>
+        <tr>
+            <td>Banana</td>
+            <td>$1.79/kg</td>
+            <td>
+                <input id = "bananaVolum">
+            </td>
+            <td><button>Remove Item</button></td>
+        </tr>
+        <tr>
+            <td>Zucchini</td>
+            <td>$5.99/kg</td>
+            <td>
+                <input id = "zucchiniVolum">
+            </td>
+            <td><button>Remove Item</button></td>
+        </tr>
+    </table>
+</div>
+
+<div class="price">
+    <table class="checkOut" border="0px solid">
+        <tr><td><button onclick="cal()">Check Out</button></td></tr>
+        <tr><td>Sous-total Items: </td><td><input id ="msg"</td></tr>
+        <tr><td>QST: </td><td><input id = "QST"></td></tr>
+        <tr><td>GST: </td><td><input id = "GST"></td></tr>
+        <tr><td>Price Total:  </td><td><input id = "total"></td></tr>
+    </table>
+</div>
 
         <!--Return to Main page-->
         <div class="ReturnHome">
