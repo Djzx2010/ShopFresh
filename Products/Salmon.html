@@ -5,10 +5,10 @@
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ShopFresh - Salmon</title>
         <link rel="stylesheet" href="../ResponsiveProductPages.css">
-        <script src=productScripts.js></script>
+        <script type="text/javaScript" src=productScripts.js></script>
     </head>
     
-    <body onload="loadCalculate(6.99)">
+    <body onload="refresh('Salmon')">
         <!-- header -->
         <header>
             <h1>ShopFresh - Fish&Meat</h1>
@@ -33,7 +33,7 @@
         <!-- description of the product -->
         <div class="description">
         <p>
-        <h1>Salmon &nbsp;&nbsp;&nbsp;&nbsp; <button id="btn" onclick="moreInfo()">More Info</button></h1>
+        <h1>Salmon &nbsp;&nbsp;&nbsp;&nbsp; <button id="btn" onclick="moreInfo('Salmon')"></button></h1>
         <p><span id="info">Fresh Salmon from local sea market.</span></p>
 
         <h3>Local ShopFresh Brand</h3>
@@ -43,7 +43,7 @@
 
         <!-- Adding to cart -->
         <form class="add">
-            <select id="quantity" onchange="calculate(6.99)">
+            <select id="quantity" onchange="calculate('Salmon')">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
