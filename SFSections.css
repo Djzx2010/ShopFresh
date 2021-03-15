@@ -92,6 +92,12 @@
       bottom:30%;
       margin-left: 60%;
   }
+
+  .cartList{
+    position: absolute; 
+    top: 15%;
+    
+  }
  
 
 

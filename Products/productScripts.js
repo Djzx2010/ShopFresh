@@ -1,16 +1,29 @@
 //variables to store information when the page is refreshed
 //fruits&veggies
 //strawberries
-
+var storedQuantityStrawberries = sessionStorage.getItem("storedQuantityStrawberries");
+var storedInfoStrawberries = sessionStorage.getItem("storedInfoStrawberries");
+var priceStrawberries = 4.99;
 //blueberries
-
+var storedQuantityBlueberries = sessionStorage.getItem("storedQuantityBlueberries");
+var storedInfoBlueberries = sessionStorage.getItem("storedInfoBlueberries");
+var priceBlueberries = 3.99;
 //bananas
-
+var storedQuantityBananas = sessionStorage.getItem("storedQuantityBananas");
+var storedInfoBananas = sessionStorage.getItem("storedInfoBananas");
+var priceBananas = 1.79;
 //zucchini
-
+var storedQuantityZucchini = sessionStorage.getItem("storedQuantityZucchini");
+var storedInfoZucchini = sessionStorage.getItem("storedInfoZucchini");
+var priceZucchini = 5.99;
 //carrots
-
-//peppers
+var storedQuantityCarrot = sessionStorage.getItem("storedQuantityCarrot");
+var storedInfoCarrot = sessionStorage.getItem("storedInfoCarrot");
+var priceCarrot = 1.99;
+//BellPepper
+var storedQuantityBellPepper = sessionStorage.getItem("storedQuantityBellPepper");
+var storedInfoBellPepper = sessionStorage.getItem("storedInfoBellPepper");
+var priceBellPepper = 15.49;
 
 //dairy&eggs
 //eggs
@@ -39,6 +52,7 @@ var storedInfoGratedParmesan = sessionStorage.getItem("storedInfoGratedParmesan"
 var priceSalmon = 5.99;
 
 //fish&meat
+
 //salmon
 var storedQuantitySalmon = sessionStorage.getItem("storedQuantitySalmon");
 var storedInfoSalmon = sessionStorage.getItem("storedInfoSalmon");
@@ -87,6 +101,7 @@ function refresh(productName) {
         var storedQuantity = storedQuantityBeef;
         var storedInfo = storedInfoBeef;
         break;
+<<<<<<< Updated upstream
             
     case 'Eggs': 
         var price = priceEggs; 
@@ -123,6 +138,45 @@ function refresh(productName) {
         var storedQuantity = storedQuantityGratedParmesan;
         var storedInfo = storedInfoGratedParmesan;
         break;
+=======
+    
+    case 'Blueberries':
+        var price = priceBlueberries;
+        var storedQuantity = storedQuantityBlueberries;
+        var storedInfo = storedInfoBlueberries;
+        break;
+
+    case 'Bananas':
+        var price = priceBananas;
+        var storedQuantity = storedQuantityBananas;
+        var storedInfo = storedInfoBananas;
+        break;
+    
+    case 'Zucchini':
+        var price = priceZucchini;
+        var storedQuantity = storedQuantityZucchini;
+        var storedInfo = storedInfoZucchini;
+        break;
+    
+    case 'Carrot':
+        var price = priceCarrot;
+        var storedQuantity = storedQuantityCarrot;
+        var storedInfo = storedInfoCarrot;
+        break;
+
+    case 'Strawberries':
+        var price = priceStrawberries;
+        var storedQuantity = storedQuantityStrawberries;
+        var storedInfo = storedInfoStrawberries;
+        break;
+    
+    case 'BellPepper':
+        var price = priceBellPepper;
+        var storedQuantity = storedQuantityBellPepper;
+        var storedInfo = storedInfoBellPepper;
+        break;
+
+>>>>>>> Stashed changes
     }
 
     //default information setting
@@ -199,6 +253,36 @@ function calculate(productName) {
             var price = priceGratedParmesan;
             sessionStorage.setItem("storedQuantityGratedParmesan", quantity);
             break;            
+        
+        case 'Blueberries':
+            var price = priceBlueberries;
+            sessionStorage.setItem("storedQuantityBlueberries", quantity);
+            break;
+
+        case 'Bananas':
+            var price = priceBananas;
+            sessionStorage.setItem('storedQuantityBananas', quantity);
+            break;
+        
+        case 'Zucchini':
+            var price = priceZucchini;
+            sessionStorage.setItem('storedQuantityZucchini', quantity);
+            break;
+        
+        case 'Carrot':
+            var price = priceCarrot;
+            sessionStorage.setItem('storedQuantityCarrot', quantity);
+            break;
+        
+        case 'Strawberries':
+            var price = priceStrawberries;
+            sessionStorage.setItem('storedQuantityStrawberries', quantity);
+            break;
+
+        case 'BellPepper':
+            var price = priceBellPepper;
+            sessionStorage.setItem('storedQuantityBellPepper', quantity);
+            break;
         }
 
     var total = price * quantity;
@@ -251,6 +335,29 @@ function moreInfo(productName) {
             case 'GratedParmesan': 
                 sessionStorage.setItem("storedInfoGratedParmesan", "less");
                 break;            
+            case 'Blueberries':
+                sessionStorage.setItem("storedInfoBlueberries", "less");
+                break;
+
+            case 'Bananas':
+                sessionStorage.setItem('storedInfoBananas', "less");
+                break;
+            
+            case 'Zucchini':
+                sessionStorage.setItem('storedInfoZucchini', 'less');
+                break;
+
+            case 'Carrot':
+                sessionStorage.setItem('storedInfoCarrot', 'less');
+                break;  
+
+            case 'Strawberries':
+                sessionStorage.setItem('storedInfoStrawberries', 'less');
+                break;
+
+            case 'Bellpepper':
+                sessionStorage.setItem('storedInfoBellpepper', 'less');
+                break;
         }
     }
     else {
@@ -294,6 +401,27 @@ function moreInfo(productName) {
             case 'GratedParmesan': 
                 sessionStorage.setItem("storedInfoGratedParmesan", "more");
                 break;                
+            
+            case 'Blueberries':
+                sessionStorage.setItem("storedInfoBlueberries", "more");
+                break;
+            
+            case 'Bananas':
+                sessionStorage.setItem('storedInfoBananas', 'more');
+                break;
+            case 'Zucchini':
+                sessionStorage.setItem('storedInfoZucchini', 'more');
+
+            case 'Carrot':
+                sessionStorage.setItem('storedInfoCarrot', 'more');
+                break;
+            case "Strawberries":
+                sessionStorage.setItem('storedInfoStrawberries', 'more');
+                break;
+
+            case 'BellPepper':
+                sessionStorage.setItem('storedInfoBellPepper', 'more');
+                break; 
         }
     }
 }
