@@ -101,7 +101,6 @@ function refresh(productName) {
         var storedQuantity = storedQuantityBeef;
         var storedInfo = storedInfoBeef;
         break;
-<<<<<<< Updated upstream
             
     case 'Eggs': 
         var price = priceEggs; 
@@ -138,7 +137,6 @@ function refresh(productName) {
         var storedQuantity = storedQuantityGratedParmesan;
         var storedInfo = storedInfoGratedParmesan;
         break;
-=======
     
     case 'Blueberries':
         var price = priceBlueberries;
@@ -176,7 +174,6 @@ function refresh(productName) {
         var storedInfo = storedInfoBellPepper;
         break;
 
->>>>>>> Stashed changes
     }
 
     //default information setting

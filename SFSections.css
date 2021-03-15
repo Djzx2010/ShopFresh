@@ -93,9 +93,12 @@
       margin-left: 60%;
   }
 
-  .cartList{
-    position: absolute; 
-    top: 15%;
+  .cartInput{
+    position: absolute;
+    top:15%
+
+    
+
     
   }
  
