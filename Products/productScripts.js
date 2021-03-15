@@ -72,10 +72,16 @@ var priceBeef = 19.89;
 var storedQuantityTrout = sessionStorage.getItem("storedQuantityTrout");
 var storedInfoTrout = sessionStorage.getItem("storedInfoTrout");
 var priceTrout = 6.39;
+
 //pork
+var storedQuantityPork = sessionStorage.getItem("storedQuantityPork");
+var storedInfoPork = sessionStorage.getItem("storedInfoPork");
+var pricePork = 16.59;
 
 //chicken
-
+var storedQuantityChicken = sessionStorage.getItem("storedQuantityChicken");
+var storedInfoChicken = sessionStorage.getItem("storedInfoChicken");
+var priceChicken = 14.39;
 
 //to execute when the page is refreshed
 function refresh(productName) {
@@ -103,13 +109,25 @@ function refresh(productName) {
         var storedQuantity = storedQuantityBeef;
         var storedInfo = storedInfoBeef;
         break;
-
-    case 'Trout':
+    
+    case 'Trout': 
         var price = priceTrout; 
         var storedQuantity = storedQuantityTrout;
         var storedInfo = storedInfoTrout;
-        break;
-            
+        break;    
+    
+    case 'Pork': 
+        var price = pricePork; 
+        var storedQuantity = storedQuantityPork;
+        var storedInfo = storedInfoPork;
+        break;    
+        
+    case 'Chicken': 
+        var price = priceChicken; 
+        var storedQuantity = storedQuantityChicken;
+        var storedInfo = storedInfoChicken;
+        break;    
+    
     case 'Eggs': 
         var price = priceEggs; 
         var storedQuantity = storedQuantityEggs;
@@ -228,12 +246,22 @@ function calculate(productName) {
             var price = priceBeef;
             sessionStorage.setItem("storedQuantityBeef", quantity);
             break;
-
-        case 'Trout':
+        
+        case 'Trout': 
             var price = priceTrout;
             sessionStorage.setItem("storedQuantityTrout", quantity);
             break;
+        
+        case 'Pork': 
+            var price = pricePork;
+            sessionStorage.setItem("storedQuantityPork", quantity);
+            break;
             
+        case 'Chicken': 
+            var price = priceChicken;
+            sessionStorage.setItem("storedQuantityChicken", quantity);
+            break;  
+
        case 'Eggs': 
             var price = priceEggs;
             sessionStorage.setItem("storedQuantityEggs", quantity);
@@ -326,6 +354,18 @@ function moreInfo(productName) {
                 sessionStorage.setItem("storedInfoTrout", "less");
                 break;
             
+            case 'Trout': 
+                sessionStorage.setItem("storedInfoTrout", "less");
+                break;
+
+            case 'Pork': 
+                sessionStorage.setItem("storedInfoPork", "less");
+                break;
+
+            case 'Chicken': 
+                sessionStorage.setItem("storedInfoChicken", "less");
+                break;
+            
             case 'Eggs': 
                 sessionStorage.setItem("storedInfoEggs", "less");
                 break;
@@ -392,8 +432,16 @@ function moreInfo(productName) {
                 sessionStorage.setItem("storedInfoBeef", "more");
                 break;
 
-            case 'Trout':
+            case 'Trout': 
                 sessionStorage.setItem("storedInfoTrout", "more");
+                break;
+
+            case 'Pork': 
+                sessionStorage.setItem("storedInfoPork", "more");
+                break;
+
+            case 'Chicken': 
+                sessionStorage.setItem("storedInfoChicken", "more");
                 break;
                 
             case 'Eggs': 
