@@ -43,12 +43,12 @@ var storedQuantityButter = sessionStorage.getItem("storedQuantityButter");
 var storedInfoButter = sessionStorage.getItem("storedInfoButter");
 var priceSalmon = 4.69;
 //yogurt
-var storedQuantityPlainYogurt = sessionStorage.getItem("storedQuantityPlainYogurt");
-var storedInfoPlainYogurt = sessionStorage.getItem("storedInfoPlainYogurt");
+var storedQuantityYogurt = sessionStorage.getItem("storedQuantityYogurt");
+var storedInfoYogurt = sessionStorage.getItem("storedInfoYogurt");
 var priceSalmon = 4.99;
 //parmesan
-var storedQuantityGratedParmesan = sessionStorage.getItem("storedQuantityGratedParmesan");
-var storedInfoGratedParmesan = sessionStorage.getItem("storedInfoGratedParmesan");
+var storedQuantityParmesan = sessionStorage.getItem("storedQuantityParmesan");
+var storedInfoParmesan = sessionStorage.getItem("storedInfoParmesan");
 var priceSalmon = 5.99;
 
 //fish&meat
@@ -152,16 +152,16 @@ function refresh(productName) {
         var storedInfo = storedInfoButter;
         break;
     
-    case 'PlainYogurt': 
-        var price = pricePlainYogurt; 
-        var storedQuantity = storedQuantityPlainYogurt;
-        var storedInfo = storedInfoPlainYogurt;
+    case 'Yogurt': 
+        var price = priceYogurt; 
+        var storedQuantity = storedQuantityYogurt;
+        var storedInfo = storedInfoYogurt;
         break;
 
-    case 'GratedParmesan': 
-        var price = priceGratedParmesan; 
-        var storedQuantity = storedQuantityGratedParmesan;
-        var storedInfo = storedInfoGratedParmesan;
+    case 'Parmesan': 
+        var price = priceParmesan; 
+        var storedQuantity = storedQuantityParmesan;
+        var storedInfo = storedInfoParmesan;
         break;
     
     case 'Blueberries':
@@ -282,14 +282,14 @@ function calculate(productName) {
             sessionStorage.setItem("storedQuantityButter", quantity);
             break;
 
-        case 'PlainYogurt': 
-            var price = pricePlainYogurt;
-            sessionStorage.setItem("storedQuantityPlainYogurt", quantity);
+        case 'Yogurt': 
+            var price = priceYogurt;
+            sessionStorage.setItem("storedQuantityYogurt", quantity);
             break;
 
-        case 'GratedParmesan': 
-            var price = priceGratedParmesan;
-            sessionStorage.setItem("storedQuantityGratedParmesan", quantity);
+        case 'Parmesan': 
+            var price = priceParmesan;
+            sessionStorage.setItem("storedQuantityParmesan", quantity);
             break;            
         
         case 'Blueberries':
@@ -382,12 +382,12 @@ function moreInfo(productName) {
                 sessionStorage.setItem("storedInfoButter", "less");
                 break;
 
-            case 'PlainYogurt': 
-                sessionStorage.setItem("storedInfoPlain Yogurt", "less");
+            case 'Yogurt': 
+                sessionStorage.setItem("storedInfoYogurt", "less");
                 break;
 
-            case 'GratedParmesan': 
-                sessionStorage.setItem("storedInfoGratedParmesan", "less");
+            case 'Parmesan': 
+                sessionStorage.setItem("storedInfoParmesan", "less");
                 break;            
             case 'Blueberries':
                 sessionStorage.setItem("storedInfoBlueberries", "less");
@@ -460,12 +460,12 @@ function moreInfo(productName) {
                 sessionStorage.setItem("storedInfoButter", "more");
                 break;
 
-            case 'PlainYogurt': 
-                sessionStorage.setItem("storedInfoPlain Yogurt", "more");
+            case 'Yogurt': 
+                sessionStorage.setItem("storedInfoYogurt", "more");
                 break;
 
-            case 'GratedParmesan': 
-                sessionStorage.setItem("storedInfoGratedParmesan", "more");
+            case 'Parmesan': 
+                sessionStorage.setItem("storedInfoParmesan", "more");
                 break;                
             
             case 'Blueberries':
