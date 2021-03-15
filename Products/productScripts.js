@@ -409,7 +409,7 @@ function moreInfo(productName) {
                 sessionStorage.setItem('storedInfoStrawberries', 'less');
                 break;
 
-            case 'Bellpepper':
+            case 'BellPepper':
                 sessionStorage.setItem('storedInfoBellpepper', 'less');
                 break;
         }
