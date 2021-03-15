@@ -14,16 +14,29 @@
 
 //dairy&eggs
 //eggs
-
+var storedQuantityEggs = sessionStorage.getItem("storedQuantityEggs");
+var storedInfoEggs = sessionStorage.getItem("storedInfoEggs");
+var priceSalmon = 2.99;
 //milk
-
+var storedQuantityMilk = sessionStorage.getItem("storedQuantityMilk");
+var storedInfoMilk = sessionStorage.getItem("storedInfoMilk");
+var priceSalmon = 5.49;
 //oka
-
+var storedQuantityOka = sessionStorage.getItem("storedQuantityOka");
+var storedInfoOka = sessionStorage.getItem("storedInfoOka");
+var priceOka = 14.49;
 //butter
-
+var storedQuantityButter = sessionStorage.getItem("storedQuantityButter");
+var storedInfoButter = sessionStorage.getItem("storedInfoButter");
+var priceSalmon = 4.69;
 //yogurt
-
+var storedQuantityPlainYogurt = sessionStorage.getItem("storedQuantityPlainYogurt");
+var storedInfoPlainYogurt = sessionStorage.getItem("storedInfoPlainYogurt");
+var priceSalmon = 4.99;
 //parmesan
+var storedQuantityGratedParmesan = sessionStorage.getItem("storedQuantityGratedParmesan");
+var storedInfoGratedParmesan = sessionStorage.getItem("storedInfoGratedParmesan");
+var priceSalmon = 5.99;
 
 //fish&meat
 //salmon
@@ -74,6 +87,42 @@ function refresh(productName) {
         var storedQuantity = storedQuantityBeef;
         var storedInfo = storedInfoBeef;
         break;
+            
+    case 'Eggs': 
+        var price = priceEggs; 
+        var storedQuantity = storedQuantityEggs;
+        var storedInfo = storedInfoEggs;
+        break;
+
+    case 'Milk': 
+        var price = priceMilk; 
+        var storedQuantity = storedQuantityMilk;
+        var storedInfo = storedInfoMilk;
+        break;
+
+    case 'Oka': 
+        var price = priceOka; 
+        var storedQuantity = storedQuantityOka;
+        var storedInfo = storedInfoOka;
+        break;
+
+    case 'Butter': 
+        var price = priceButter; 
+        var storedQuantity = storedQuantityButter;
+        var storedInfo = storedInfoButter;
+        break;
+    
+    case 'PlainYogurt': 
+        var price = pricePlainYogurt; 
+        var storedQuantity = storedQuantityPlainYogurt;
+        var storedInfo = storedInfoPlainYogurt;
+        break;
+
+    case 'GratedParmesan': 
+        var price = priceGratedParmesan; 
+        var storedQuantity = storedQuantityGratedParmesan;
+        var storedInfo = storedInfoGratedParmesan;
+        break;
     }
 
     //default information setting
@@ -120,6 +169,36 @@ function calculate(productName) {
             var price = priceBeef;
             sessionStorage.setItem("storedQuantityBeef", quantity);
             break;
+            
+       case 'Eggs': 
+            var price = priceEggs;
+            sessionStorage.setItem("storedQuantityEggs", quantity);
+            break;
+
+        case 'Milk': 
+            var price = priceMilk;
+            sessionStorage.setItem("storedQuantityMilk", quantity);
+            break;
+
+        case 'Oka': 
+            var price = priceOka;
+            sessionStorage.setItem("storedQuantityOka", quantity);
+            break;
+
+        case 'Butter': 
+            var price = priceButter;
+            sessionStorage.setItem("storedQuantityButter", quantity);
+            break;
+
+        case 'PlainYogurt': 
+            var price = pricePlainYogurt;
+            sessionStorage.setItem("storedQuantityPlainYogurt", quantity);
+            break;
+
+        case 'GratedParmesan': 
+            var price = priceGratedParmesan;
+            sessionStorage.setItem("storedQuantityGratedParmesan", quantity);
+            break;            
         }
 
     var total = price * quantity;
@@ -148,6 +227,30 @@ function moreInfo(productName) {
             case 'Beef': 
                 sessionStorage.setItem("storedInfoBeef", "less");
                 break;
+            
+            case 'Eggs': 
+                sessionStorage.setItem("storedInfoEggs", "less");
+                break;
+
+            case 'Milk': 
+                sessionStorage.setItem("storedInfoMilk", "less");
+                break;
+
+            case 'Oka': 
+                sessionStorage.setItem("storedInfoOka", "less");
+                break;
+
+            case 'Butter': 
+                sessionStorage.setItem("storedInfoButter", "less");
+                break;
+
+            case 'PlainYogurt': 
+                sessionStorage.setItem("storedInfoPlain Yogurt", "less");
+                break;
+
+            case 'GratedParmesan': 
+                sessionStorage.setItem("storedInfoGratedParmesan", "less");
+                break;            
         }
     }
     else {
@@ -167,6 +270,30 @@ function moreInfo(productName) {
             case 'Beef': 
                 sessionStorage.setItem("storedInfoBeef", "more");
                 break;
+                
+            case 'Eggs': 
+                sessionStorage.setItem("storedInfoEggs", "more");
+                break;
+
+            case 'Milk': 
+                sessionStorage.setItem("storedInfoMilk", "more");
+                break;
+
+            case 'Oka': 
+                sessionStorage.setItem("storedInfoOka", "more");
+                break;
+
+            case 'Butter': 
+                sessionStorage.setItem("storedInfoButter", "more");
+                break;
+
+            case 'PlainYogurt': 
+                sessionStorage.setItem("storedInfoPlain Yogurt", "more");
+                break;
+
+            case 'GratedParmesan': 
+                sessionStorage.setItem("storedInfoGratedParmesan", "more");
+                break;                
         }
     }
 }
