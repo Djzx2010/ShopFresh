@@ -85,8 +85,7 @@
         console.log(`You have ${getQuantity()} items in your carts`);
 
         // Print all items informations
-        let itemRow = '<tr> <td>Name</td> <td>Price/item</td> <td>Quantity</td> <td>Total</td> <td>Add Quantity</td> <td>Delete Item</td> </tr>';
-        itemRow += '<tr></tr>';
+        let itemRow = '<tr> <td>Name</td> <td>Price/item</td> <td>Quantity</td> <td>Total</td> <td>Change Quantity</td> <td>Delete Item</td> </tr>';
         for(let i = 0; i<cart.length; i+=1){
             console.log(`${cart[i].name} $${cart[i].price} x ${cart[i].quantity}`);
             itemRow += `<tr> 
@@ -94,7 +93,7 @@
                            <td>$${cart[i].price}</td>
                            <td>${cart[i].quantity}</td>
                            <td> $ ${(cart[i].price * cart[i].quantity).toFixed(2)}</td>
-                           <td><button onclick="addQuantity(${i})">Add</button></td>
+                           <td><button onclick="addQuantity(${i})">Add</button> <button onclick="removeQuantity(${i})">Remove</button></td>
                            <td><button onclick="removeItem(${i})">Delete</button></td>
                            </tr>`;
         }
@@ -131,10 +130,23 @@
         cart.splice(i,1);
         showItem();
     }
-
+//--------------------------------------------------------------------------------------------------
+    //Add one unit of an item by clicking on the button
     function addQuantity(i){
         cart[i].quantity++;
         showItem();
+    }
+    //--------------------------------------------------------------------------------------------------
+    //Remove one unit of an item by clicking on the button
+    function removeQuantity(i){
+        if(cart[i].quantity == 0 ){
+            cart[i].quantity = 0;
+            showItem();
+        }
+        else {
+            cart[i].quantity--;
+            showItem();
+        }
     }
 
 
