@@ -1,175 +1,222 @@
 <!DOCTYPE html>
-<html lang="eng" dir="ltr"></html>
+<html lang="eng" dir="ltr">
+
+</html>
 
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Fresh - Shopping Cart</title>
     <link rel="stylesheet" href="SFSections.css">
-    <script type = "text/javascript" src =shoppingCart.js></script>
+    
 </head>
+
 <body>
-<!-- header -->
-<div class="Header">
-    <h1>ShopFresh - Shopping Cart</h1>
-</div>>
+    <!-- header -->
+    <div class="Header">
+        <h1>ShopFresh - Shopping Cart</h1>
+    </div>>
 
-        <div class="continueShopping">
-            <p class="CS"><a href="ShopFreshFrontPage.html"><h2>Continue Shopping</h2></a></p>
-        </div>
+    <div class="continueShopping">
+        <p class="CS"><a href="ShopFreshFrontPage.html">
+                <h2>Continue Shopping</h2>
+            </a></p>
+    </div>
 
-        <div class="cartInput">
-            
-        </div>
-<!-------------------------------------------------------------------------------------------------------------
--->      
-        
-        <div class="itemList">
-            <table class="shoppingList" border="1px solid" id="itemList">
-             
-            </table>
-        </div>
-<!-------------------------------------------------------------------------------------------------------------->
+    <div class="cartInput">
 
-<div class="price">
-    <table class="checkOut" border="0px solid" >
-        <tr><td><button onclick="checkout()">Check Out</button></td></tr>
-        <tr><td>Sous-total Items: </td> <td id="sousTotal"> </td> </tr>
-        <tr><td>QST: </td> <td id="QST"></td> </tr>
-        <tr><td>GST: </td> <td id="GST"></td></tr>
-        <tr><td>Price Total:  </td> <td id="pricePlusTaxes"></td></tr>
-    </table>
-</div>
+    </div>
+    <!-------------------------------------------------------------------------------------------------------------
+-->
 
-        <!--Return to Main page-->
-        <div class="ReturnHome">
-            <p class="RH"><a href="ShopFreshFrontPage.html"><h2>Home</h2></a></p>
-        </div>
+    <div class="itemList">
+        <table class="shoppingList" border="1px solid" id="itemList">
 
-<!-- footer includes student information -->
-<div class="Footer">
-    <h3>Derek Lam(40132682), Mathieu Morier(40181304), Alexandra Charland(40061073), Jizhou Yang(40033034), Leon Zhang(40175616), Zebran Kamruzzaman(40065230)</h3>
-</div>>
+        </table>
+    </div>
+    <!-------------------------------------------------------------------------------------------------------------->
 
-<script>
-   const table = document.getElementById("itemList");
+    <div class="price">
+        <table class="checkOut" border="0px solid">
+            <tr>
+                <td><button onclick="checkout()">Check Out</button></td>
+            </tr>
+            <tr>
+                <td>Sous-total Items: </td>
+                <td id="sousTotal"> </td>
+            </tr>
+            <tr>
+                <td>QST: </td>
+                <td id="QST"></td>
+            </tr>
+            <tr>
+                <td>GST: </td>
+                <td id="GST"></td>
+            </tr>
+            <tr>
+                <td>Price Total: </td>
+                <td id="pricePlusTaxes"></td>
+            </tr>
+        </table>
+    </div>
 
-   const sousTotal = document.getElementById("sousTotal");
-   const QST = document.getElementById("QST");
-   const GST = document.getElementById("GST");
-   const pricePlusTaxes = document.getElementById("pricePlusTaxes");
-   
-   
-   const cart = [{name:"Strawberries",price:4.99,quantity:1}, {name:"Banana",price:1.79,quantity:1}, {name:'Eggs', price:2.99, quantity:1},
-                  {name:'Salmon', price:6.99, quantity:1}, {name:'Chicken', price:14.39, quantity:1}];
-   console.log(cart[0].name);
-    //-------------------------------------------------------------------------
-    //Add items
-    function addItem(name,price){
-        // Check if there is the same item in the shopping cart
-        for(let i  =0; i<cart.length; i+=1){
-          if(cart[i].name === name) {
-              cart[i].quantity +=1;
-              return
-          }  
+    <!--Return to Main page-->
+    <div class="ReturnHome">
+        <p class="RH"><a href="ShopFreshFrontPage.html">
+                <h2>Home</h2>
+            </a></p>
+    </div>
+
+    <!-- footer includes student information -->
+    <div class="Footer">
+        <h3>Derek Lam(40132682), Mathieu Morier(40181304), Alexandra Charland(40061073), Jizhou Yang(40033034), Leon
+            Zhang(40175616), Zebran Kamruzzaman(40065230)</h3>
+    </div>>
+
+    <script>
+        const table = document.getElementById("itemList");
+
+        const sousTotal = document.getElementById("sousTotal");
+        const QST = document.getElementById("QST");
+        const GST = document.getElementById("GST");
+        const pricePlusTaxes = document.getElementById("pricePlusTaxes");
+
+
+        const cart = [{
+                name: "Strawberries",
+                price: 4.99,
+                quantity: 1
+            }, {
+                name: "Banana",
+                price: 1.79,
+                quantity: 1
+            }, {
+                name: 'Eggs',
+                price: 2.99,
+                quantity: 1
+            },
+            {
+                name: 'Salmon',
+                price: 6.99,
+                quantity: 1
+            }, {
+                name: 'Chicken',
+                price: 14.39,
+                quantity: 1
+            }
+        ];
+        console.log(cart[0].name);
+
+
+        //-------------------------------------------------------------------------
+        //Add items
+        function addItem(name, price) {
+            // Check if there is the same item in the shopping cart
+            for (let i = 0; i < cart.length; i += 1) {
+                if (cart[i].name === name) {
+                    cart[i].quantity += 1;
+                    return
+                }
+            }
+
+            // Push new item to the array cart
+            const item = {
+                name,
+                price,
+                quantity: 1
+            };
+            cart.push(item);
         }
 
-        // Push new item to the array cart
-        const item = {name, price, quantity:1};
-        cart.push(item);
-    }
-    
-    //-------------------------------------------------------------------------------
-    // Show items
-    function showItem(){
-        //Display total quantity
-        console.log(`You have ${getQuantity()} items in your carts`);
+        //-------------------------------------------------------------------------------
+        // Show items
+        function showItem() {
+            //Display total quantity
+            console.log(`You have ${getQuantity()} items in your carts`);
 
-        // Print all items informations
-        let itemRow = '<tr> <td>Name</td> <td>Price/item</td> <td>Quantity</td> <td>Total</td> <td>Change Quantity</td> <td>Delete Item</td> </tr>';
-        for(let i = 0; i<cart.length; i+=1){
-            console.log(`${cart[i].name} $${cart[i].price} x ${cart[i].quantity}`);
-            itemRow += `<tr> 
+            // Print all items informations
+
+            let itemRow =
+                '<tr> <td>Name</td> <td>Price/item</td> <td>Quantity</td> <td>Total</td> <td>Change Quantity</td> <td>Delete Item</td> </tr>';
+            for (let i = 0; i < cart.length; i += 1) {
+                cart[i].quantity = (sessionStorage.getItem(cart[i].name) || 1);
+
+                console.log(`${cart[i].name} $${cart[i].price} x ${cart[i].quantity}`);
+                itemRow += `<tr> 
                            <td>${cart[i].name}</td>
                            <td>$${cart[i].price}</td>
-                           <td>${cart[i].quantity}</td>
+                           <td>${cart[i].quantity}</td> 
                            <td> $ ${(cart[i].price * cart[i].quantity).toFixed(2)}</td>
                            <td><button onclick="addQuantity(${i})">Add</button> <button onclick="removeQuantity(${i})">Remove</button></td>
                            <td><button onclick="removeItem(${i})">Delete</button></td>
                            </tr>`;
+            }
+            table.innerHTML = itemRow;
+
+            //Display total price
+            console.log(`Total price is ${getTotalPrice()}`);
+
         }
-        table.innerHTML = itemRow;
 
-        //Display total price
-        console.log(`Total price is ${getTotalPrice()}`);
-
-    }
-
-    //--------------------------------------------------------------------------------------
-    //Get the total quantity
-    function getQuantity() {
-        let totalQuantity = 0;
-        for(let i = 0; i < cart.length; i +=1) { 
-            totalQuantity = totalQuantity + cart[i].quantity   
+        //--------------------------------------------------------------------------------------
+        //Get the total quantity
+        function getQuantity() {
+            let totalQuantity = 0;
+            for (let i = 0; i < cart.length; i += 1) {
+                totalQuantity = totalQuantity + cart[i].quantity
+            }
+            return totalQuantity;
         }
-        return totalQuantity;
-    }
 
-    //---------------------------------------------------------------------------------------
-    // Get the total price
-    function getTotalPrice() {
-        let totalPrice =0;
-        for(let i=0; i<cart.length; i+=1){
-            totalPrice += cart[i].price * cart[i].quantity;
+        //---------------------------------------------------------------------------------------
+        // Get the total price
+        function getTotalPrice() {
+            let totalPrice = 0;
+            for (let i = 0; i < cart.length; i += 1) {
+                totalPrice += cart[i].price * cart[i].quantity;
+            }
+            return totalPrice.toFixed(2);
         }
-        return totalPrice.toFixed(2);
-    }
 
-    //---------------------------------------------------------------------------------------------
-    //Remove Item
-    function removeItem(i){
-        cart.splice(i,1);
-        showItem();
-    }
-//--------------------------------------------------------------------------------------------------
-    //Add one unit of an item by clicking on the button
-    function addQuantity(i){
-        cart[i].quantity++;
-        showItem();
-    }
-    //--------------------------------------------------------------------------------------------------
-    //Remove one unit of an item by clicking on the button
-    function removeQuantity(i){
-        if(cart[i].quantity == 0 ){
-            return
-        }
-        else {
-            cart[i].quantity--;
+        //---------------------------------------------------------------------------------------------
+        //Remove Item
+        function removeItem(i) {
+            sessionStorage.setItem(cart[i].name, 0)
+            cart.splice(i, 1);
             showItem();
         }
-    }
+        //--------------------------------------------------------------------------------------------------
+        //Add one unit of an item by clicking on the button
+        function addQuantity(i) {
+            cart[i].quantity++;
+            sessionStorage.setItem(cart[i].name, cart[i].quantity);
+            showItem();
+        }
+        //--------------------------------------------------------------------------------------------------
+        //Remove one unit of an item by clicking on the button
+        function removeQuantity(i) {
+            if (cart[i].quantity == 0) {
+                return
+            } else {
+                cart[i].quantity--;
+                sessionStorage.setItem(cart[i].name, cart[i].quantity);
+                showItem();
+            }
+        }
 
+        //------------------------------------------------------------------------------------
+        //Executed when checkout button is selected
+        function checkout() {
+            let total = Number(getTotalPrice());
+            let qst = Number((getTotalPrice() * 0.10).toFixed(2));
+            let gst = Number((getTotalPrice() * 0.05).toFixed(2))
+            sousTotal.innerHTML = `$ ${total}`;
+            QST.innerHTML = `$ ${qst}`;
+            GST.innerHTML = `$ ${gst}`;
+            pricePlusTaxes.innerHTML = `$ ${(total+qst+gst).toFixed(2)}`;
+        }
 
-
-//------------------------------------------------------------------------------------
-    //Executed when checkout button is selected
-    function checkout(){
-        let total = Number( getTotalPrice() );
-        let qst = Number( (getTotalPrice() * 0.10).toFixed(2) );
-        let gst = Number( (getTotalPrice() * 0.05).toFixed(2) )
-        sousTotal.innerHTML = `$ ${total}`;
-        QST.innerHTML       = `$ ${qst}`;
-        GST.innerHTML       = `$ ${gst}`;
-        pricePlusTaxes.innerHTML      = `$ ${(total+qst+gst).toFixed(2)}`;
-    }
-   
-   
-
-   showItem();
-
-
-</script>
+        showItem();
+    </script>
 
 </body>
-
-
 </html>
