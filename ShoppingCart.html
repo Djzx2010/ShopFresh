@@ -36,7 +36,7 @@
     <!-------------------------------------------------------------------------------------------------------------->
 
     <div class="price">
-        <table class="checkOut" border="0px solid">
+        <table class="checkOut" border="0px solid" style="text-align: right;">
             <tr>
                 <td><button onclick="checkout()">Check Out</button></td>
             </tr>
@@ -208,10 +208,10 @@
         function checkout() {
             let total = Number(getTotalPrice());
             let qst = Number((getTotalPrice() * 0.10).toFixed(2));
-            let gst = Number((getTotalPrice() * 0.05).toFixed(2))
-            sousTotal.innerHTML = `$ ${total}`;
-            QST.innerHTML = `$ ${qst}`;
-            GST.innerHTML = `$ ${gst}`;
+            let gst = Number((getTotalPrice() * 0.05).toFixed(2));
+            sousTotal.innerHTML = `$ ${total.toFixed(2)}`;
+            QST.innerHTML = `$ ${qst.toFixed(2)}`;
+            GST.innerHTML = `$ ${gst.toFixed(2)}`;
             pricePlusTaxes.innerHTML = `$ ${(total+qst+gst).toFixed(2)}`;
         }
 
