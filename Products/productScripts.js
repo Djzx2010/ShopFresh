@@ -29,11 +29,11 @@ var priceBellPepper = 15.49;
 //eggs
 var storedQuantityEggs = sessionStorage.getItem("storedQuantityEggs");
 var storedInfoEggs = sessionStorage.getItem("storedInfoEggs");
-var priceSalmon = 2.99;
+var priceEggs = 2.99;
 //milk
 var storedQuantityMilk = sessionStorage.getItem("storedQuantityMilk");
 var storedInfoMilk = sessionStorage.getItem("storedInfoMilk");
-var priceSalmon = 5.49;
+var priceMilk = 5.49;
 //oka
 var storedQuantityOka = sessionStorage.getItem("storedQuantityOka");
 var storedInfoOka = sessionStorage.getItem("storedInfoOka");
@@ -41,15 +41,15 @@ var priceOka = 14.49;
 //butter
 var storedQuantityButter = sessionStorage.getItem("storedQuantityButter");
 var storedInfoButter = sessionStorage.getItem("storedInfoButter");
-var priceSalmon = 4.69;
+var priceButter = 4.69;
 //yogurt
 var storedQuantityYogurt = sessionStorage.getItem("storedQuantityYogurt");
 var storedInfoYogurt = sessionStorage.getItem("storedInfoYogurt");
-var priceSalmon = 4.99;
+var priceYogurt = 4.99;
 //parmesan
 var storedQuantityParmesan = sessionStorage.getItem("storedQuantityParmesan");
 var storedInfoParmesan = sessionStorage.getItem("storedInfoParmesan");
-var priceSalmon = 5.99;
+var priceParmesan = 5.99;
 
 //fish&meat
 
@@ -324,7 +324,7 @@ function calculate(productName) {
         }
 
     var total = price * quantity;
-    document.getElementById("productPrice").innerHTML = "$" + total;
+    document.getElementById("productPrice").innerHTML = "$" + total.toFixed(2);
 }
 
 //to execute when the more information button is clicked
