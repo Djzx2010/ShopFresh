@@ -6,73 +6,79 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Fresh - Shopping Cart</title>
-    <link rel="stylesheet" href="SFSections.css">
-    
+    <link rel="stylesheet" href="shopcart.css">
 </head>
-
 <body>
-    <!-- header -->
-    <div class="Header">
-        <h1>ShopFresh - Shopping Cart</h1>
-    </div>>
-
+<!-- header -->
+<div class="Header">
+    <h1>
+        ShopFresh - Shopping Cart</h1>
+</div>
+<div class=" w1200">
     <div class="continueShopping">
-        <p class="CS"><a href="ShopFreshFrontPage.html">
-                <h2>Continue Shopping</h2>
-            </a></p>
-    </div>
-
-    <div class="cartInput">
-
+        <p class="CS">
+            <a href="ShopFreshFrontPage.html">Continue Shopping </a>
+        </p>
     </div>
     <!-------------------------------------------------------------------------------------------------------------
 -->
-
     <div class="itemList">
-        <table class="shoppingList" border="1px solid" id="itemList">
-
-        </table>
+        <div class="shoppingList" border="1px solid" id="itemList">
+        </div>
     </div>
     <!-------------------------------------------------------------------------------------------------------------->
-
     <div class="price">
         <table class="checkOut" border="0px solid" style="text-align: right;">
             <tr>
-                <td><button onclick="checkout()">Check Out</button></td>
+                <td>
+                    <button onclick="checkout()">
+                        Check Out</button>
+                </td>
             </tr>
             <tr>
-                <td>Sous-total Items: </td>
-                <td id="sousTotal"> </td>
+                <td>
+                    Sous-total Items:
+                </td>
+                <td id="sousTotal">
+                </td>
             </tr>
             <tr>
-                <td>QST: </td>
-                <td id="QST"></td>
+                <td>
+                    QST:
+                </td>
+                <td id="QST">
+                </td>
             </tr>
             <tr>
-                <td>GST: </td>
-                <td id="GST"></td>
+                <td>
+                    GST:
+                </td>
+                <td id="GST">
+                </td>
             </tr>
             <tr>
-                <td>Price Total: </td>
-                <td id="pricePlusTaxes"></td>
+                <td>
+                    Price Total:
+                </td>
+                <td id="pricePlusTaxes">
+                </td>
             </tr>
         </table>
     </div>
-
     <!--Return to Main page-->
     <div class="ReturnHome">
-        <p class="RH"><a href="ShopFreshFrontPage.html">
-                <h2>Home</h2>
-            </a></p>
+        <p class="RH">
+            <a href="ShopFreshFrontPage.html">Home </a>
+        </p>
     </div>
-
-    <!-- footer includes student information -->
-    <div class="Footer">
-        <h3>Derek Lam(40132682), Mathieu Morier(40181304), Alexandra Charland(40061073), Jizhou Yang(40033034), Leon
-            Zhang(40175616), Zebran Kamruzzaman(40065230)</h3>
-    </div>>
-
-    <script>
+</div>
+<!-- footer includes student information -->
+<div class="Footer">
+    <h3>
+        Derek Lam(40132682), Mathieu Morier(40181304), Alexandra Charland(40061073), Jizhou
+        Yang(40033034), Leon Zhang(40175616), Zebran Kamruzzaman(40065230)</h3>
+</div>
+<script>
         const table = document.getElementById("itemList");
 
         const sousTotal = document.getElementById("sousTotal");
@@ -136,19 +142,19 @@
             // Print all items informations
 
             let itemRow =
-                '<tr> <td>Name</td> <td>Price/item</td> <td>Quantity</td> <td>Total</td> <td>Change Quantity</td> <td>Delete Item</td> </tr>';
+                '<div> <span>Name</span> <span>Price/item</span> <span>Quantity</span> <span>Total</span> <span>Change Quantity</span> <span>Delete Item</span> </div>';
             for (let i = 0; i < cart.length; i += 1) {
                 cart[i].quantity = (sessionStorage.getItem(cart[i].name) || 1);
 
                 console.log(`${cart[i].name} $${cart[i].price} x ${cart[i].quantity}`);
-                itemRow += `<tr> 
-                           <td>${cart[i].name}</td>
-                           <td>$${cart[i].price}</td>
-                           <td>${cart[i].quantity}</td> 
-                           <td> $ ${(cart[i].price * cart[i].quantity).toFixed(2)}</td>
-                           <td><button onclick="addQuantity(${i})">Add</button> <button onclick="removeQuantity(${i})">Remove</button></td>
-                           <td><button onclick="removeItem(${i})">Delete</button></td>
-                           </tr>`;
+                itemRow += `<div>
+                           <span>${cart[i].name}</span>
+                           <span>$${cart[i].price}</span>
+                           <span>${cart[i].quantity}</span>
+                           <span> $ ${(cart[i].price * cart[i].quantity).toFixed(2)}</span>
+                           <span><button onclick="addQuantity(${i})">Add</button> <button onclick="removeQuantity(${i})">Remove</button></span>
+                           <span><button onclick="removeItem(${i})">Delete</button></span>
+                           </div>`;
             }
             table.innerHTML = itemRow;
 
@@ -217,6 +223,5 @@
 
         showItem();
     </script>
-
 </body>
 </html>
