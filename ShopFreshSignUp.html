@@ -1,78 +1,50 @@
 <!DOCTYPE html>
 <html lang="eng" dir="ltr"></html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Fresh - SignUp</title>
-    <link rel="stylesheet" href="SFSections.css">
-</head>
-<body>
-    <!--border-->
-    <div class="BorderDiv"> 
-        <!--Header-->
-        <div class="Header">
-            <h1>Sign Up</h1>
-        </div>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shop Fresh - SignUp</title>
+        <link rel="stylesheet" href="SFSections.css">
+    </head>
 
-        <!--Box for Signing up-->
-        <div class="SignUpBorder">
-            <!--User in puts info here-->
-            <form class="LoginForm" action="ShopFreshFrontPage.html" method ="post">
-                <h2>Fill in the details below</h2>
-                <label for="fName">First Name: </label>
-                <input type="text" class="FirstName" name="fName" value ="" placeholder="Enter first name">
-
-                <br>
-
-                <label for="lName">Last Name: </label>
-                <input type="text" class="LastName" name="lName" value ="" placeholder="Enter last name">
-
-                <br>
-
-                Select Gender:
-                <select class="" name="gender">
-                    <option value="blank"></option>
-                    <option value="M">Male</option>
-                    <option value="F">Female</option>
-                    <option value="NA">Do not want to specify</option>
-                </select>
-
-                <br>
-
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-
-                <br>
-               
-                <label for="confirmEmail">Confirm Email:</label>
-                <input type="confirmEmail" class="form-control" id="ConfirmEmail" placeholder="Enter email again" name="ConfirmEmail">
-
-                <br> 
-
-                <label for="pw">Password:</label>
-                <input type="password" class="form-control" id="pw" placeholder="Enter password" name="pw">
-                
-                <br>
-
-                <label for="confirmPw">Confirm Password:</label>
-                <input type="confirmPw" class="form-control" id="confirmPw" placeholder="Enter password again" name="confirmPw">
-
-                <br>
-                
-                <button type="submit" onclick="alert('Account Created!')">Submit</button>
-                <button type="reset" onclick ="alert('Reset Selected.')">Reset</button>
+    <body>
+        <!-- header -->
+        <header>
+            <h1>ShopFresh - Sign Up</h1>
+        </header>
+        
+        <!-- menu/navigation bar -->
+        <ul class="menu">
+            <li class="menu"><a href="ShopFreshFrontPage.html">Back to Welcome Page</a></li>  
+            <li class="menu"><a href="ShopFreshFruits&VeggiesSection.html">Fruits&Vegetables Aisle</a></li> 
+            <li class="menu"><a href="ShopFreshDairy&EggsSection.html">Dairy&Eggs Aisle</a></li> 
+            <li class="menu"><a href="ShopFreshFish&MeatSection.html">Fish&Meat Aisle</a></li>
+            <li class="menuRight"><a href="ShoppingCart.html">Shopping Cart</a></li>
+            <li class="menuRight"><a href="ShopFreshLogin.html">Login</a></li>
+        </ul>
+    
+        <!-- Instructions for user -->
+        <p class="instructions">Please fill in all information below to create your account.</p>
+        
+        <!--User in puts info here-->
+        <div class="login">
+            <form class="input">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name"
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Confirm Email">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm Password">
+                <a class="submit">Create Account</a>
+                <a class="submit">Reset</a>
+                <p class="signUp"><a href="ShopFreshLogin.html">Log In</a></p>
             </form>
         </div>
 
-        <!--Return to Main page-->
-        <div class="ReturnHome">
-            <p class="RH"><a href="ShopFreshFrontPage.html"><h2>Home</h2></a></p>
-        </div>
-
         <!--Footer-->
-        <div class="Footer">
+        <footer>
             <h3>Derek Lam(40132682), Mathieu Morier(40181304), Alexandra Charland(40061073), Jizhou Yang(40033034), Leon Zhang(40175616) , Zebran Kamruzzaman(40065230)</h3>
-        </div>
-    </div>
-</body>
+        </footer>
+
+    </body>

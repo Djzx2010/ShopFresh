@@ -1,61 +1,189 @@
-*{
+/* padding and borders included in width and height */
+* {box-sizing: border-box}
+
+/* mobile first design */
+/* change link color (for aesthetic purposes only) */
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: darkslateblue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: slateblue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+body { font-family: sans-serif; }
+
+/* only difference with mobile and other for header and footer: 
+   font size is smaller */
+header {
+    padding: 2%;
+    width:100%;
+    height:20%;
+    text-align: center;
+    color: white;
+    background-color: mediumseagreen; /* For browsers that do not support gradients */
+    background-image: linear-gradient(70deg, mediumseagreen, slateblue);
+    opacity: 0.7;
+    font-size: 12px;
     font-family: sans-serif;
 }
 
-.BorderDiv {
-    position: absolute;
-    border:1px solid black;
-    width:100%;
-    height: 100%;
-    margin:auto;
-}
-
-.Header {
-    position: absolute;
-    width:100%;
-    height:100px;
-    text-align: center;
-    color: white;
+footer {
+    display: flex;
+    width: 100%;
+    height: 10%;
     background-color: mediumseagreen; /* For browsers that don't support gradients */
     background-image: linear-gradient(70deg, mediumseagreen, slateblue);
-}
-
-.LoginForm {
-    position:absolute;
-    margin:auto;
-    width: 100%;
-    height:600px;
-    text-align: center;
-    bottom:20px;
-}
-
-.forgotBtn{
-    border:none;
-    cursor: pointer;
-}
-
-.SignUp {
-    position: absolute;
-    bottom:100px;
-    left:50px;
-}
-
-.ReturnHome {
-    position: absolute;
-    bottom:100px;
-    right:50px;
-}
-
-.Footer{
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    background-color: mediumseagreen; /* For browsers that don't support gradients */
-    background-image: linear-gradient(70deg, mediumseagreen, slateblue);
+    opacity: 0.7;
     bottom: 0px;
     color:white;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+/* menu/navigation bar */
+ul.menu {
+    margin-top: 0;
+    border-bottom: medium groove green;
+    border-top: medium groove green;
+    background-color: rgb(60,179,113, 0.5);
+    padding: 1%;
+    list-style-type: none;
+}
+
+/* stack menu items rather than making them inline for mobile */
+li.menu {
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
     text-align: center;
-  }
+    font-family: sans-serif;
+}
+
+li.menuRight {
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.login {
+    display: block;
+    text-align: center;
+}
+      
+form.input {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input { 
+    display: block;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    background: rgba(60, 179, 113, 0.2);
+    padding: 10px;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+    
+.email:focus, .password:focus {
+    border: 2px solid rgba(0, 0, 0, 0.3) !important;
+        
+}
+        
+.submit {
+    display: block;
+    margin: 30px;
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(70deg, rgba(60, 179, 113, 0.7), rgba(123, 104, 238, 0.7));
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+        
+.forgotP {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    padding-top: 15px;
+}
+
+.signUp {
+    margin-top: 60px;
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    padding-top: 15px;
+}
+
+.instructions {
+    padding: 2%;
+    width:100%;
+    height:20%;
+    text-align: center;
+    color: mediumseagreen;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+/* landscape tablets should have header/footer font size larger */
+@media only screen and (min-width: 780px) {
+    
+    /* adjust header and footer font size */
+    header {font-size: 20px}
+    footer {font-size: 15px}
+    .instructions {font-size: 18px}
+}
+
+/* laptops and desktops should have a horizontal menu  
+   and header/footer font size larger */
+@media only screen and (min-width: 860px) {
+    
+    /* adjust menu for horizontal display */
+    li.menu {
+        width: auto;
+        display: inline;
+    }   
+    li.menuRight {
+        width: auto;
+        display: inline;
+        float: right;
+    }
+    
+    /* adjust header and footer font size */
+    header {font-size: 20px}
+    footer {font-size: 15px}
+    .instructions {font-size: 18px}
+    
+}
+
+
+
+
+/*
+
   .button {
     border: none;
     color: white;
@@ -107,5 +235,5 @@
   }
  
 
-
+*/
 
