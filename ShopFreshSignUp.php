@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="eng" dir="ltr"></html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Fresh - SignUp</title>
     <link rel="stylesheet" href="SFSections.css">
+    
 </head>
 <body>
     <!--border-->
@@ -18,7 +18,7 @@
         <!--Box for Signing up-->
         <div class="SignUpBorder">
             <!--User in puts info here-->
-            <form class="LoginForm" action="ShopFreshFrontPage.html" method ="post">
+            <form class="LoginForm"  method ="post" action = "SignUp.php">
                 <h2>Fill in the details below</h2>
                 <label for="fName">First Name: </label>
                 <input type="text" class="FirstName" name="fName" value ="" placeholder="Enter first name">
@@ -46,7 +46,7 @@
                 <br>
                
                 <label for="confirmEmail">Confirm Email:</label>
-                <input type="confirmEmail" class="form-control" id="ConfirmEmail" placeholder="Enter email again" name="ConfirmEmail">
+                <input type="email" class="form-control" id="confirmEmail" placeholder="Enter email again" name="confirmEmail">
 
                 <br> 
 
@@ -56,11 +56,11 @@
                 <br>
 
                 <label for="confirmPw">Confirm Password:</label>
-                <input type="confirmPw" class="form-control" id="confirmPw" placeholder="Enter password again" name="confirmPw">
+                <input type="password" class="form-control" id="confirmPw" placeholder="Enter password again" name="confirmPw">
 
                 <br>
                 
-                <button type="submit" onclick="alert('Account Created!')">Submit</button>
+                <button type="submit" onclick='SignUp.php'>Submit</button>
                 <button type="reset" onclick ="alert('Reset Selected.')">Reset</button>
             </form>
         </div>
