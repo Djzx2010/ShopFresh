@@ -26,7 +26,7 @@
                 </div>
                 <div class="formGroup2">
                     <label for="confirmEmail">Confirm email:</label>
-                    <input type="cEmail" class="form-control" id="pw" placeholder="Enter email again" name="confEmail">
+                    <input type="email" class="form-control" id="pw" placeholder="Enter email again" name="confEmail">
                 </div>
                 <button type="submit">Submit</button>
             </form>

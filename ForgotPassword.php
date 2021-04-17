@@ -15,7 +15,7 @@ if($email == $confirmEmail) {
         }
     }
     if ($validEmail){ 
-        echo "<script type='text/javascript'>alert('$userPassword')</script>";
+        echo "<script type='text/javascript'>alert('Your password is: $userPassword')</script>";
         header("Refresh:2; url=ShopFreshLogin.php");
     }
     else {
