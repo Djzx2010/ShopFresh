@@ -49,7 +49,7 @@
                 <br>
                 
                 <button type="submit" onclick='SignUp.php'>Submit</button>
-                <button type="reset" onclick ="alert('Reset Selected.')">Reset</button>
+                <button type="reset" onclick ="alert('Resetting Fields.')">Reset</button>
             </form>
         </div>
         <!--Return to Main page-->
