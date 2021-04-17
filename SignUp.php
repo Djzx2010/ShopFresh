@@ -5,6 +5,7 @@ $xml->formatOutput = true;
 
 $firstName = $_POST['fName'];
 $lastName = $_POST['lName'];
+$fullName = $firstName .' '. $lastName;
 $email = $_POST['email'];
 $cEmail = $_POST['confirmEmail'];
 $password = $_POST['pw'];
@@ -23,13 +24,18 @@ if($firstName && $lastName && $email && $cEmail && $password && $cPassword) {
             $xml->load('Users.xml');
         }
         $user = $xml->createElement("user");
-        $user->setAttribute("status", 0);
-
+        
         $userEmail = $xml->createElement("Email", $email);
         $user->appendChild($userEmail);
 
         $userPassword = $xml->createElement("Password", $password);
         $user->appendChild($userPassword);
+
+        $userName = $xml->createElement("Name", $fullName);
+        $user->appendChild($userName);
+
+        $status = $xml->createElement("Status", 0);
+        $user->appendChild($status);
 
         $xml->documentElement->appendChild($user);
         $xml->save('Users.xml') or die("ERROR");
