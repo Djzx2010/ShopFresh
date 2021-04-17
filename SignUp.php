@@ -40,7 +40,7 @@ if($firstName && $lastName && $email && $cEmail && $password && $cPassword) {
         $xml->documentElement->appendChild($user);
         $xml->save('Users.xml') or die("ERROR");
 
-        header("Refresh:1; url=ShopFreshLogin.html");
+        header("Refresh:1; url=ShopFreshLogin.php");
     }
     else {
         echo "<script type='text/javascript'>alert('Mismatch in Fields!')</script>";

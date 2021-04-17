@@ -18,7 +18,7 @@
         <!--Box for Logging in-->
         <div class="LoginBorder">
             <!--User in puts info here-->
-            <form class="LoginForm" action="ShopFreshFrontPage.html" method ="post">
+            <form class="LoginForm"  method ="post" action ="SignIn.php">
                 <h2>Sign in</h2>
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
@@ -33,13 +33,13 @@
                 <a href="ShopFreshForgotPassword.html">Forgot Password?</a>
                 
                 <br>
-                <button type="login" onclick="alert('Logged in!')">Login</button>
+                <button type="login">Login</button>
             </form>
         </div>
 
          <!--to Sign Up Page-->
          <div class="SignUp">
-            <p class="SU"><a href="ShopFreshSignUp.html"><h2>Create Account</h2></a></p>
+            <p class="SU"><a href="ShopFreshSignUp.php"><h2>Create Account</h2></a></p>
         </div>
 
         <!--Return to Main page-->

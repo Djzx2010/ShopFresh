@@ -48,7 +48,7 @@
                 <input type="password" class="form-control" id="confirmPw" placeholder="Enter password again" name="confirmPw">
                 <br>
                 
-                <button type="submit" onclick='SignUp.php'>Submit</button>
+                <button type="submit">Submit</button>
                 <button type="reset" onclick ="alert('Resetting Fields.')">Reset</button>
             </form>
         </div>
