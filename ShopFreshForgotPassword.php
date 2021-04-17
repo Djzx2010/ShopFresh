@@ -18,8 +18,8 @@
         <!--Box for Forgot Password-->
         <div class="LoginBorder">
             <!--User in puts info here-->
-            <form class="LoginForm" action="ShopFreshFrontPage.html" method ="post">
-                <h2>Enter your email below, and a temporary password will be sent.</h2>
+            <form class="LoginForm" action="ForgotPassword.php" method ="post">
+                <h2>Enter your email below, and your password will be shown temporarily.</h2>
                 <div class="formGroup1">
                     <label for="email">Email:</label>
                     <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
@@ -28,7 +28,7 @@
                     <label for="confirmEmail">Confirm email:</label>
                     <input type="cEmail" class="form-control" id="pw" placeholder="Enter email again" name="confEmail">
                 </div>
-                <button type="submit" onclick="alert('Temporary Password Sent!')">Submit</button>
+                <button type="submit">Submit</button>
             </form>
         </div>
 

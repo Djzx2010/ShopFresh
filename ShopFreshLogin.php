@@ -30,7 +30,7 @@
 
                 <br>
                 
-                <a href="ShopFreshForgotPassword.html">Forgot Password?</a>
+                <a href="ShopFreshForgotPassword.php">Forgot Password?</a>
                 
                 <br>
                 <button type="login">Login</button>
