@@ -1,3 +1,4 @@
+  
 /* padding and borders included in width and height */
 * {box-sizing: border-box}
 
@@ -97,9 +98,21 @@ li.menuRight {
     display: inline;
 }
 
-/* not dependent on screen size */
 button {
-    display: inline;
+    display: block;
+    margin: 30px;
+    cursor: pointer;
+    border-radius: 5em;
+    border: 0;
+    color: #fff;
+    background: linear-gradient(70deg, rgba(60, 179, 113, 0.7), rgba(123, 104, 238, 0.7));
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04); 
 }
 
 .add {line-height: 3;}
@@ -125,6 +138,12 @@ button {
     .add {
         display: inline;
         line-height: normal;
+    }
+    
+    button {
+        display: inline;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 
@@ -160,6 +179,12 @@ button {
     .add {
         display: inline;
         line-height: normal;
+    }
+    
+    button {
+        display: inline;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 

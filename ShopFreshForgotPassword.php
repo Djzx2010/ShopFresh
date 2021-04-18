@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="eng" dir="ltr"></html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Fresh - Forgot Password</title>
-    <link rel="stylesheet" href="SFSections.css">
-</head>
-<body>
-    <!--border-->
-    <div class="BorderDiv"> 
-        <!--Header-->
-        <div class="Header">
-            <h1>Login</h1>
-        </div>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shop Fresh - Forgot Password</title>
+        <link rel="stylesheet" href="SFSections.css">
+    </head>
 
-        <!--Box for Forgot Password-->
-        <div class="LoginBorder">
-            <!--User in puts info here-->
-            <form class="LoginForm" action="ForgotPassword.php" method ="post">
-                <h2>Enter your email below, and your password will be shown temporarily.</h2>
-                <div class="formGroup1">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                </div>
-                <div class="formGroup2">
-                    <label for="confirmEmail">Confirm email:</label>
-                    <input type="email" class="form-control" id="pw" placeholder="Enter email again" name="confEmail">
-                </div>
-                <button type="submit">Submit</button>
+    <body>
+        <!-- header -->
+        <header>
+            <h1>ShopFresh - Forgot Password</h1>
+        </header>
+        
+        <!-- menu/navigation bar -->
+        <ul class="menu">
+            <li class="menu"><a href="ShopFreshFrontPage.html">Back to Welcome Page</a></li>  
+            <li class="menu"><a href="ShopFreshFruits&VeggiesSection.html">Fruits&Vegetables Aisle</a></li> 
+            <li class="menu"><a href="ShopFreshDairy&EggsSection.html">Dairy&Eggs Aisle</a></li> 
+            <li class="menu"><a href="ShopFreshFish&MeatSection.html">Fish&Meat Aisle</a></li>
+            <li class="menuRight"><a href="ShoppingCart.html">Shopping Cart</a></li>
+            <li class="menuRight"><a href="ShopFreshLogin.php">Login</a></li>
+        </ul>
+    
+        <!-- Instructions for user -->
+        <p class="instructions">Enter your email below, and a temporary password will be sent.</p>
+        
+        <!--User in puts info here-->
+        <div class="login">
+            <form class="input" method = "post" action = "ForgotPassword.php">
+                <input type="text" placeholder="Email" name = "email">
+                <input type="text" placeholder="Confirm Email" name = "confEmail">
+                <button type = "submit" class><a class="submit">Submit</a> </button>
+                <p class="signUp"><a href="ShopFreshSignUp.php">Sign Up</a></p>
+                <p class="forgotP"><a href="ShopFreshLogin.php">Log In</a></p>
             </form>
         </div>
 
-        <!--Return to Main page-->
-        <div class="ReturnHome">
-            <p class="RH"><a href="ShopFreshFrontPage.html"><h2>Home</h2></a></p>
-        </div>
-
         <!--Footer-->
-        <div class="Footer">
+        <footer>
             <h3>Derek Lam(40132682), Mathieu Morier(40181304), Alexandra Charland(40061073), Jizhou Yang(40033034), Leon Zhang(40175616) , Zebran Kamruzzaman(40065230)</h3>
-        </div>
-    </div>
-</body>
+        </footer>
+
+    </body>
