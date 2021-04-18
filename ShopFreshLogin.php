@@ -4,14 +4,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shop Fresh - Forgot Password</title>
+        <title>Shop Fresh - Login</title>
         <link rel="stylesheet" href="SFSections.css">
     </head>
 
     <body>
         <!-- header -->
         <header>
-            <h1>ShopFresh - Forgot Password</h1>
+            <h1>ShopFresh - Login</h1>
         </header>
         
         <!-- menu/navigation bar -->
@@ -21,20 +21,17 @@
             <li class="menu"><a href="ShopFreshDairy&EggsSection.html">Dairy&Eggs Aisle</a></li> 
             <li class="menu"><a href="ShopFreshFish&MeatSection.html">Fish&Meat Aisle</a></li>
             <li class="menuRight"><a href="ShoppingCart.html">Shopping Cart</a></li>
-            <li class="menuRight"><a href="ShopFreshLogin.html">Login</a></li>
+            <li class="menuRight"><a href="ShopFreshLogin.php">Login</a></li>
         </ul>
     
-        <!-- Instructions for user -->
-        <p class="instructions">Enter your email below, and a temporary password will be sent.</p>
-        
         <!--User in puts info here-->
-        <div class="login" action="ShopFreshFrontPage.html" method ="post">
-            <form class="input">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Confirm Email">
-                <a class="submit">Submit</a>
-                <p class="signUp"><a href="ShopFreshSignUp.html">Sign Up</a></p>
-                <p class="forgotP"><a href="ShopFreshLogin.html">Log In</a></p>
+        <div class="login">
+            <form class="input" method = "post" action="SignIn.php">
+                <input type="email" placeholder="Email" name ="email">
+                <input type="password" placeholder="Password" name = "pw">
+                <a><button type = "submit" class="submit">Log In</button></a>
+                <p class="signUp"><a href="ShopFreshSignUp.php">Sign Up</a></p>
+                <p class="forgotP"><a href="ShopFreshForgotPassword.php">Forgot Password?</a></p>
             </form>
         </div>
 

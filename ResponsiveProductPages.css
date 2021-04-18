@@ -1,3 +1,4 @@
+  
 /* padding and borders included in width and height */
 * {box-sizing: border-box}
 
@@ -190,5 +191,3 @@ button {
 #info {
     display:none;
 }
-
-

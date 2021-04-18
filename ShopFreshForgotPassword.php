@@ -4,14 +4,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shop Fresh - SignUp</title>
+        <title>Shop Fresh - Forgot Password</title>
         <link rel="stylesheet" href="SFSections.css">
     </head>
 
     <body>
         <!-- header -->
         <header>
-            <h1>ShopFresh - Sign Up</h1>
+            <h1>ShopFresh - Forgot Password</h1>
         </header>
         
         <!-- menu/navigation bar -->
@@ -21,24 +21,20 @@
             <li class="menu"><a href="ShopFreshDairy&EggsSection.html">Dairy&Eggs Aisle</a></li> 
             <li class="menu"><a href="ShopFreshFish&MeatSection.html">Fish&Meat Aisle</a></li>
             <li class="menuRight"><a href="ShoppingCart.html">Shopping Cart</a></li>
-            <li class="menuRight"><a href="ShopFreshLogin.html">Login</a></li>
+            <li class="menuRight"><a href="ShopFreshLogin.php">Login</a></li>
         </ul>
     
         <!-- Instructions for user -->
-        <p class="instructions">Please fill in all information below to create your account.</p>
+        <p class="instructions">Enter your email below, and your password will be shown temporarily.</p>
         
         <!--User in puts info here-->
         <div class="login">
-            <form class="input">
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name"
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Confirm Email">
-                <input type="password" placeholder="Password">
-                <input type="password" placeholder="Confirm Password">
-                <a class="submit">Create Account</a>
-                <a class="submit">Reset</a>
-                <p class="signUp"><a href="ShopFreshLogin.html">Log In</a></p>
+            <form class="input" method = "post" action = "ForgotPassword.php">
+                <input type="email" placeholder="Email" name = "email">
+                <input type="email" placeholder="Confirm Email" name = "confEmail">
+                <a><button type = "submit" class="submit">Submit</button></a>
+                <p class="signUp"><a href="ShopFreshSignUp.php">Sign Up</a></p>
+                <p class="forgotP"><a href="ShopFreshLogin.php">Log In</a></p>
             </form>
         </div>
 
