@@ -491,3 +491,20 @@ function moreInfo(productName) {
         }
     }
 }
+
+//adds to cart in PHP session variable
+function addToCart(name, price) {
+
+    const qty = document.getElementById('quantity').value;
+
+    const item = { 'name': name, 'price': price, 'quantity': qty };
+
+    //to make the POST body out of the JSON object above
+    const bodyObj = new URLSearchParams(item);
+	  
+    fetch('../ShoppingCartPHP/addToCart.php', {
+        method: 'post',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: bodyObj.toString()
+    })
+}

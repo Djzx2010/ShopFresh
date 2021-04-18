@@ -1,3 +1,5 @@
+<?php include("ShoppingCart/addToCart.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en-CA">
     
@@ -20,7 +22,7 @@
             <li class="menu"><a href="../ShopFreshFruits&VeggiesSection.html">Fruits&Vegetables Aisle</a></li> 
             <li class="menu"><a href="../ShopFreshDairy&EggsSection.html">Dairy&Eggs Aisle</a></li> 
             <li class="menu"><a href="../ShopFreshFish&MeatSection.html">Fish&Meat Aisle</a></li>
-            <li class="menuRight"><a href="../ShoppingCart.html">Shopping Cart</a></li>
+            <li class="menuRight"><a href="../ShoppingCart.php">Shopping Cart</a></li>
             <li class="menuRight"><a href="../ShopFreshLogin.html">Login</a></li>
         </ul>
         
@@ -49,7 +51,7 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select> &nbsp;&nbsp;&nbsp;&nbsp; 
-            <button type="submit">Add to Cart</button>
+            <button onclick="addToCart('Shrimp', 11.99)">Add to Cart</button>
         </form>
         </p>
         </div>
