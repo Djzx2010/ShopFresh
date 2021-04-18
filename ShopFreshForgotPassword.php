@@ -25,14 +25,14 @@
         </ul>
     
         <!-- Instructions for user -->
-        <p class="instructions">Enter your email below, and a temporary password will be sent.</p>
+        <p class="instructions">Enter your email below, and your password will be shown temporarily.</p>
         
         <!--User in puts info here-->
         <div class="login">
             <form class="input" method = "post" action = "ForgotPassword.php">
-                <input type="text" placeholder="Email" name = "email">
-                <input type="text" placeholder="Confirm Email" name = "confEmail">
-                <button type = "submit" class><a class="submit">Submit</a> </button>
+                <input type="email" placeholder="Email" name = "email">
+                <input type="email" placeholder="Confirm Email" name = "confEmail">
+                <a><button type = "submit" class="submit">Submit</button></a>
                 <p class="signUp"><a href="ShopFreshSignUp.php">Sign Up</a></p>
                 <p class="forgotP"><a href="ShopFreshLogin.php">Log In</a></p>
             </form>

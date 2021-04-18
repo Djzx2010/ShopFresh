@@ -32,12 +32,12 @@
             <form class="input" method = "post" action = "SignUp.php">
                 <input type="text" placeholder="First Name" name = "fName">
                 <input type="text" placeholder="Last Name" name = "lName">
-                <input type="text" placeholder="Email" name = "email">
-                <input type="text" placeholder="Confirm Email" name = "confirmEmail">
+                <input type="email" placeholder="Email" name = "email">
+                <input type="email" placeholder="Confirm Email" name = "confirmEmail">
                 <input type="password" placeholder="Password" name = "pw">
                 <input type="password" placeholder="Confirm Password" name = "confirmPw">
-                <button type ="submit" class ="submit">Create Account</button>
-                <button type ="reset" class = "submit"onclick="alert('Resetting Fields')">Reset</button>
+                <a><button type ="submit" class ="submit">Create Account</button></a>
+                <a><button type ="reset" class = "submit"onclick="alert('Resetting Fields')">Reset</button></a>
                 <p class="signUp"><a href="ShopFreshLogin.php">Log In</a></p>
             </form>
         </div>

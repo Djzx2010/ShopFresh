@@ -27,9 +27,9 @@
         <!--User in puts info here-->
         <div class="login">
             <form class="input" method = "post" action="SignIn.php">
-                <input type="text" placeholder="Email" name ="email">
+                <input type="email" placeholder="Email" name ="email">
                 <input type="password" placeholder="Password" name = "pw">
-                <button type = "submit"><a class="submit">Log In</a></button>
+                <a><button type = "submit" class="submit">Log In</button></a>
                 <p class="signUp"><a href="ShopFreshSignUp.php">Sign Up</a></p>
                 <p class="forgotP"><a href="ShopFreshForgotPassword.php">Forgot Password?</a></p>
             </form>
