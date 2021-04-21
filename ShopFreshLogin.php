@@ -1,3 +1,19 @@
+<?php
+  //check the user is login
+  $clientName="";
+  if(isset($_COOKIE["isLogin"])){
+      $userStatus=$_COOKIE["userStatus"];
+      //the client is login ,direct the homepage
+     if($userStatus == 1) {
+        header("Refresh:1; url=BackStorePage.html");
+    }
+    else {
+        header("Refresh:1; url=ShopFreshFrontPage.html");
+    }
+
+   }
+   
+?>
 <!DOCTYPE html>
 <html lang="eng" dir="ltr"></html>
 
