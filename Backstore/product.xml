@@ -2,4 +2,4 @@
 <list>
 
 
-</list>
+<product><name>Bananas</name><quantity>10kg</quantity><type>Mexican</type><size>Small</size></product><product><name>Beef</name><quantity>50kg</quantity><type>Farm</type><size>None</size></product><product><name>BellPepper</name><quantity>10kg</quantity><type>Mexican</type><size>Large</size></product></list>
