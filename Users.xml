@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Users>
+  <user>
+    <Email>hello@hotmail.com</Email>
+    <Password>hello</Password>
+    <Name>Mr. Hello</Name>
+    <Status>0</Status>
+  </user>
+  <user>
+    <Email>admin@hotmail.com</Email>
+    <Password>admin</Password>
+    <Name>I'm Admin</Name>
+    <Status>1</Status>
+  </user>
+  <user>
+    <Email>123@hotmail.com</Email>
+    <Password>123</Password>
+    <Name>Just Numbers</Name>
+    <Status>0</Status>
+  </user>
+  <user>
+    <Email>CSS@hotmail.com</Email>
+    <Password>css</Password>
+    <Name>Testing NewCSS</Name>
+    <Status>0</Status>
+  </user>
+</Users>
