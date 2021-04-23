@@ -23,7 +23,7 @@
             <li class="menu"><a href="../ShopFreshDairy&EggsSection.html">Dairy&Eggs Aisle</a></li> 
             <li class="menu"><a href="../ShopFreshFish&MeatSection.html">Fish&Meat Aisle</a></li>
             <li class="menuRight"><a href="../ShoppingCart.php">Shopping Cart</a></li>
-            <li class="menuRight"><a href="../ShopFreshLogin.html">Login</a></li>
+            <li class="menuRight"><a href="../ShopFreshLogin.php">Login</a></li>
         </ul>
         
         <!-- variable page content, different for all products -->
