@@ -20,19 +20,19 @@
             <li class="menu"><a href="ShopFreshFruits&VeggiesSection.html">Fruits&Vegetables Aisle</a></li> 
             <li class="menu"><a href="ShopFreshDairy&EggsSection.html">Dairy&Eggs Aisle</a></li> 
             <li class="menu"><a href="ShopFreshFish&MeatSection.html">Fish&Meat Aisle</a></li>
-            <li class="menuRight"><a href="ShoppingCart.php">Shopping Cart</a></li>
+            <li class="menuRight"><a href="ShoppingCart.html">Shopping Cart</a></li>
             <li class="menuRight"><a href="ShopFreshLogin.php">Login</a></li>
         </ul>
     
         <!-- Instructions for user -->
-        <p class="instructions">Enter your email below, and a temporary password will be sent.</p>
+        <p class="instructions">Enter your email below, and your password will be shown temporarily.</p>
         
         <!--User in puts info here-->
-        <div class="login" action="ShopFreshFrontPage.html" method ="post">
-            <form class="input">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Confirm Email">
-                <a class="submit">Submit</a>
+        <div class="login">
+            <form class="input" method = "post" action = "ForgotPassword.php">
+                <input type="email" placeholder="Email" name = "email">
+                <input type="email" placeholder="Confirm Email" name = "confEmail">
+                <a><button type = "submit" class="submit">Submit</button></a>
                 <p class="signUp"><a href="ShopFreshSignUp.php">Sign Up</a></p>
                 <p class="forgotP"><a href="ShopFreshLogin.php">Log In</a></p>
             </form>
