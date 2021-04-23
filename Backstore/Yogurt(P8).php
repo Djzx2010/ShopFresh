@@ -33,7 +33,7 @@ for($i =0; $i<$name->length; $i++){
    <head>
     <meta charset="utf-8">
     <title>Shop Fresh - BackStore Page</title>
-    <link rel="stylesheet" href="../BackStore.css">
+    <link rel="stylesheet" href="BackStore.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -54,7 +54,7 @@ for($i =0; $i<$name->length; $i++){
          </button>
          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
            <div class="navbar-nav">
-             <a class="nav-link" href="../BackStorePage.html">BackStore</a>
+             <a class="nav-link" href="BackStorePage.html">BackStore</a>
              <a class="nav-link" href="../ShoppingCart.html">Shopping Cart</a>
            </div>
          </div>
