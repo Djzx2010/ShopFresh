@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<ROOT>
+<orders>
+	<users>
+		<username> USER1 </username>
+		<products>
+			<productname> Bananas </productname>
+			<productquantity> 1 </productquantity>
+		</products>
+		<products>
+			<productname> Butter </productname>
+			<productquantity> 1 </productquantity>
+		</products>
+		<products>
+			<productname> Chicken </productname>
+			<productquantity> 2 </productquantity>
+		</products>
+		<products>
+			<productname> Milk <productname>
+			<productquantity> 1 <productquantity>
+		</products>
+		<products>
+			<productname> Salmon </productname>
+			<productquantity> 1 </productquantity>
+		</products>
+		<products>
+			<productname> Strawberries </productname>
+			<productquantity> 3 </productquantity>
+		</products>
+	</users>
+	<users>
+		<username> USER2 </username>
+		<products>
+			<productname> BellPepper </productname>
+			<productquantity> 3 </productquantity>
+		</products>
+		<products>
+			<productname> Chicken </productname>
+			<productquantity> 2 </productquantity>
+		</products>
+		<products>
+			<productname> Parmesan </productname>
+			<productquantity> 1 </productquantity>
+		</products>
+		<products>
+			<productname> Trout </productname>
+			<productquantity> 1 </productquantity>
+		</products>
+	</users>
+	<users>
+		<username> USER3 </username>
+		<products>
+			<productname> Beef </productname>
+			<productquantity> 1 </productquantity>
+		</products>
+		<products>
+			<productname> Eggs </productname>
+			<productquantity> 3 </productquantity>
+		</products>
+		<products>
+			<productname> Shrimp </productname>
+			<productquantity> 5 </productquantity>
+		</products>
+		<products>
+			<productname> Yogourt </productname>
+			<productquantity> 2 </productquantity>
+		</products>
+		<products>
+			<productname> Zucchini </productname>
+			<productquantity> 3 </productquantity>
+		</products>
+	</users>
+</orders>
+<ROOT>
