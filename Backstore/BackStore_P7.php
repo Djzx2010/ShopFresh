@@ -1,4 +1,40 @@
+<?php
 
+//DELETE PRODUCT
+if(isset($_POST['submit'])){
+  //Store info of the form in variable
+  $name = $_POST['name'];
+
+  //Create DOM and load file in it
+  $xml = new DOMDocument();
+  $xml->load("product.xml");
+
+  //Loop through the DOM to find the product and delete it
+  $product = $xml->getElementsByTagName("product");
+  $prodName = $xml->getElementsByTagName("name");
+  
+  for($i = 0; $i<$product->length; $i++){
+    if($prodName->item($i)->nodeValue == $name){
+    $product->item($i)->parentNode->removeChild($product->item($i));
+     
+    }
+  }
+  //Save the change to the xml file
+  $xml->save("product.xml");
+ 
+  //Delete php file edit page
+  $file_pointer = $name . "(P8).php";
+  if(file_exists($file_pointer)) {
+   unlink($file_pointer);
+  }
+ 
+  header("Refresh:0");
+  
+
+
+
+}
+?>
 <html lang="eng" dir="ltr">
 
 <head>
@@ -43,7 +79,7 @@
     <!-- ---------------------------------------------------------------------------------------------------------------  -->
 
     <?php
-    
+   
 
     $productList= simplexml_load_file("product.xml") or die("Error: Cannot load the file");
     $display = "";
@@ -71,42 +107,8 @@
 
     echo "<ul>" . $display . "</ul>";
 
-    //----------------------------------------------------------------------------------
-    //Delete xml record + delete php file
-    
 
-   if(isset($_POST['submit'])){
-     //Store info of the form in variable
-     $name = $_POST['name'];
    
-     //Create DOM and load file in it
-     $xml = new DOMDocument();
-     $xml->load("product.xml");
-
-     //Loop through the DOM to find the product and delete it
-     $product = $xml->getElementsByTagName("product");
-     $prodName = $xml->getElementsByTagName("name");
-     
-     for($i = 0; $i<$product->length; $i++){
-       if($prodName->item($i)->nodeValue == $name){
-       $product->item($i)->parentNode->removeChild($product->item($i));
-        
-       }
-     }
-     //Save the change to the xml file
-     $xml->save("product.xml");
-     
-     //Delete php file edit page
-     $file_pointer = $name . "(P8).php";
-     if(file_exists($file_pointer)) {
-      unlink($file_pointer);
-     }
-     
-     
-
-
-
-   }
    
     ?>
   

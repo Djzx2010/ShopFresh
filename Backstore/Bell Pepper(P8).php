@@ -14,7 +14,7 @@ $t = $xml->getElementsByTagName("type");
 $s = $xml->getElementsByTagName("size");
 
 for($i =0; $i<$name->length; $i++){
-  if($name->item($i)->nodeValue == "Chicken") {
+  if($name->item($i)->nodeValue == "Bell Pepper") {
     $q->item($i)->nodeValue = $quantity;
     $t->item($i)->nodeValue = $type;
     $s->item($i)->nodeValue = $size;
@@ -22,6 +22,8 @@ for($i =0; $i<$name->length; $i++){
     
     }
     $xml->save("product.xml");
+    //Return to P7
+    header("Refresh:0; url=BackStore_P7.php");
 }
 
 
@@ -62,8 +64,8 @@ for($i =0; $i<$name->length; $i++){
      </nav>
       <div class="borderForm">
       <div class="editForm">
-       <h3>Chicken</h3>  
-       <form action=" Chicken(P8).php " method="post">
+       <h3>Bell Pepper</h3>  
+       <form action=" Bell Pepper(P8).php " method="post">
         <label for="quantity">Quantity</label><br>
         <input type="text" id="quantity" name="quantity" value=""><br>
         <label for="type">Type</label><br>

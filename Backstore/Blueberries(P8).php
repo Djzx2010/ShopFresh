@@ -22,6 +22,8 @@ for($i =0; $i<$name->length; $i++){
     
     }
     $xml->save("product.xml");
+    //Return to P7
+    header("Refresh:0; url=BackStore_P7.php");
 }
 
 

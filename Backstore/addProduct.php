@@ -43,6 +43,8 @@ for(\$i =0; \$i<\$name->length; \$i++){
     
     }
     \$xml->save(\"product.xml\");
+    //Return to P7
+    header(\"Refresh:0; url=BackStore_P7.php\");
 }
 
 
@@ -103,7 +105,15 @@ for(\$i =0; \$i<\$name->length; \$i++){
 $editPage = fopen($name . "(P8).php", "w") or die("Unable to open file!");
 fwrite($editPage, $editPageInfo);
 fclose($editPage);
+
+if(isset($_POST['save'])){
+  //Return to P7
+  header("Refresh:0; url=BackStore_P7.php");
 }
+
+}
+
+
 ?>
 
 <html lang="eng" dir="ltr">
