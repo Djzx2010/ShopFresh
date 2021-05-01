@@ -15,15 +15,15 @@
 
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../ShopFreshFrontPage.html">ShopFresh</a>
+            <a class="navbar-brand" href="ShopFreshFrontPage.html">ShopFresh</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="../BackStorePage.html">BackStore</a>
-                    <a class="nav-link" href="../ShoppingCart.html">Shopping Cart</a>
+                    <a class="nav-link" href="BackStorePage.html">BackStore</a>
+                    <a class="nav-link" href="ShoppingCart.php">Shopping Cart</a>
                 </div>
             </div>
         </div>
@@ -44,10 +44,23 @@
 
         $orderList= simplexml_load_file("orders.xml") or die("Error: Cannot load the file");
         $display = "";
+        $itemL = "";
+        $firstSkip = True;
+
        
     
         foreach($orderList->children() as $users){
+
+            foreach($users->children() as $products){
+                if($firstSkip){
+                    $firstSkip = False;
+                    continue;
+                }
+                $itemL = $itemL . "<li>x{$products->productquantity} {$products->productname} </li>"; }
+
           $display = $display . "
+
+         
 
           <li class=\"list-group-item\"><data value=\"01\">
                     <h3>{$users->username}</h3>
@@ -55,14 +68,9 @@
                 <div class=\"row\">
                     <div class=\"col-md-6\">
                         <p>
-                            <ul> "
-
-                            foreach($orderList->children() as $products){
-                                $display = $display . "<li>x{$products->productquantity} {$products->productname}</li>
-"
-                            }
-
-                            "</ul>
+                            <ul> " .
+                            $itemL .
+                        "</ul>
                         </p>
                     </div>
                     <div class=\"col-md-6\">
@@ -75,10 +83,13 @@
                     </div>
                 </div>
             </li>
-          "
+          " ;
     
 
         echo "<ul>" . $display . "</ul>";
+        $display = "";
+        $itemL  = "";
+        $firstSkip = True;
     
         //----------------------------------------------------------------------------------
         //Delete xml record + delete php file

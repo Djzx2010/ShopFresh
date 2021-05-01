@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<ROOT>
 <orders>
 	<users>
 		<username> USER1 </username>
@@ -16,8 +15,8 @@
 			<productquantity> 2 </productquantity>
 		</products>
 		<products>
-			<productname> Milk <productname>
-			<productquantity> 1 <productquantity>
+			<productname> Milk </productname>
+			<productquantity> 1 </productquantity>
 		</products>
 		<products>
 			<productname> Salmon </productname>
@@ -71,4 +70,3 @@
 		</products>
 	</users>
 </orders>
-<ROOT>
